@@ -8,7 +8,9 @@ module com.httt.simpo_java {
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
-    requires eu.hansolo.tilesfx;
+    requires java.sql;
+    requires MaterialFX;
+
 
     opens com.httt.simpo_java to javafx.fxml;
     exports com.httt.simpo_java;
