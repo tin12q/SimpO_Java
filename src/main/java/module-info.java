@@ -12,8 +12,10 @@ module com.httt.simpo_java {
     requires MaterialFX;
     opens com.httt.simpo_java to javafx.fxml;
     exports com.httt.simpo_java;
-    exports com.httt.simpo_java.control;
-    opens com.httt.simpo_java.control to javafx.fxml;
+    exports com.httt.simpo_java.control.ExamMaker;
+    opens com.httt.simpo_java.control.ExamMaker to javafx.fxml;
+    exports com.httt.simpo_java.control.Server;
+    opens com.httt.simpo_java.control.Server to javafx.fxml;
 
 
 }
