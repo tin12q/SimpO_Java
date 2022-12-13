@@ -1,14 +1,25 @@
 package com.httt.simpo_java;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class Main {
-    @FXML
-    private Label welcomeText;
+import java.io.IOException;
+public class Main extends Application {
+    @Override
+    public void start(Stage stage) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("mainServer.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Main");
+        stage.show();
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+        launch();
     }
 }

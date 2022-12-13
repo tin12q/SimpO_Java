@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.simpo_java.control.mainServer">
+   <children>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="450.0" prefWidth="800.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="800.0">
+               <children>
+                  <Button fx:id="lamDe" mnemonicParsing="false" onAction="#lamDeClick" prefHeight="225.0" prefWidth="800.0" text="Làm đề">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+            
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="800.0">
+               <children>
+                  <Button fx:id="server" mnemonicParsing="false" onAction="#serverClick" prefHeight="225.0" prefWidth="800.0" text="Server">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Button>
+               </children>
+          </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
