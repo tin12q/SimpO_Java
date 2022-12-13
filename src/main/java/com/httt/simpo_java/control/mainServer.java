@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+import java.util.Objects;
 
 
 public class mainServer {
@@ -20,9 +20,7 @@ public class mainServer {
 
     @FXML
     private Button server;
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
+
 
     @FXML
     void lamDeClick(ActionEvent event) {
@@ -31,10 +29,15 @@ public class mainServer {
 
     @FXML
     void serverClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/com/httt/simpo_java/Server/serverWindow.fxml"));
+        Parent content = loader.load();
 
-        Parent root = FXMLLoader.load(getClass().getResource("serverWindow.fxml"));
-        Stage window = (Stage) server.getScene().getWindow();
-        window.setScene(new Scene(root));
+        Scene scene = new Scene(content);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        stage.setScene(scene);
+        stage.show();
     }
 
 }

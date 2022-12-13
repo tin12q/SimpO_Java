@@ -10,7 +10,9 @@ import java.io.IOException;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("mainServer.fxml"));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("mainServer.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Main");
