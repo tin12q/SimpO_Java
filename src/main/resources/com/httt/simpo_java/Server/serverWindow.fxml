@@ -14,11 +14,11 @@
 
 <AnchorPane fx:id="serWin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.simpo_java.control.Server.serverWindow">
    <children>
-      <BorderPane prefHeight="450.0" prefWidth="800.0">
+      <BorderPane prefHeight="450.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <AnchorPane prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER">
                <children>
-                  <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="800.0">
+                  <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <HBox>
                            <HBox.margin>
@@ -43,10 +43,10 @@
                                  <children>
                                     <Label fx:id="Ip">
                                        <VBox.margin>
-                                          <Insets bottom="15.0" top="22.0" />
+                                          <Insets bottom="10.0" top="22.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <TextField fx:id="Port_Label">
+                                    <TextField fx:id="Port_Label" prefWidth="160.0">
                                        <VBox.margin>
                                           <Insets bottom="10.0" top="10.0" />
                                        </VBox.margin>
@@ -75,7 +75,7 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="350.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+                  <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="350.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <tabs>
                         <Tab text="Stuff">
                            <content>
