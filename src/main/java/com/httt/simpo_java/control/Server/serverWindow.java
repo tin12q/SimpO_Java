@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 import java.net.*;
 import java.util.Enumeration;
@@ -14,6 +15,8 @@ import java.util.Enumeration;
 public class serverWindow {
 
     String ip;
+    @FXML
+    private AnchorPane serWin;
     @FXML
     private Button StartButton;
     @FXML
@@ -29,5 +32,6 @@ public class serverWindow {
         Ip.setText(new IpGet().getHostIP());
 
     }
+
 
 }

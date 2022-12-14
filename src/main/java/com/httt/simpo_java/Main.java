@@ -37,6 +37,7 @@ public class Main extends Application {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         stage.setScene(scene);
+        stage.sizeToScene();
         stage.show();
     }
 
@@ -48,6 +49,7 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Main");
+        stage.sizeToScene();
         stage.show();
 
     }
