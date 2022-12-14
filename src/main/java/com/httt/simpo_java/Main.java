@@ -1,5 +1,6 @@
 package com.httt.simpo_java;
 
+import com.httt.simpo_java.control.Server.IpGet;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,6 +12,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+
 public class Main extends Application {
     @FXML
     private Button lamDe;
@@ -50,6 +54,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
+
         launch();
     }
 }

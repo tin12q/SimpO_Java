@@ -39,17 +39,29 @@
                                     </Label>
                                  </children>
                               </VBox>
-                              <TextField>
+                              <VBox>
+                                 <children>
+                                    <Label fx:id="Ip">
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" top="22.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Port_Label">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
                                  <HBox.margin>
-                                    <Insets top="55.0" />
+                                    <Insets />
                                  </HBox.margin>
-                              </TextField>
+                              </VBox>
                            </children>
                         </HBox>
                         <Region maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                         <VBox alignment="CENTER">
                            <children>
-                              <Button alignment="CENTER" mnemonicParsing="false" text="Yooooo" />
+                              <Button fx:id="StartButton" alignment="CENTER" mnemonicParsing="false" onAction="#Start" text="Yooooo" />
                            </children>
                            <HBox.margin>
                               <Insets right="25.0" />
