@@ -1,6 +1,7 @@
 package com.httt.simpo_java;
 
 import com.httt.simpo_java.control.Server.IpGet;
+import io.github.palexdev.materialfx.controls.MFXButton;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,10 +18,10 @@ import java.net.UnknownHostException;
 
 public class Main extends Application {
     @FXML
-    private Button lamDe;
+    private MFXButton lamDe;
 
     @FXML
-    private Button server;
+    private MFXButton server;
 
 
     @FXML
@@ -30,14 +31,15 @@ public class Main extends Application {
     @FXML
     void serverClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/com/httt/simpo_java/Server/serverWindow.fxml"));
+        loader.setLocation(getClass().getResource("/com/httt/simpo_java/Server/SerWin.fxml"));
         Parent content = loader.load();
 
         Scene scene = new Scene(content);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         stage.setScene(scene);
-        stage.sizeToScene();
+        stage.setX(0);
+        stage.setY(0);
         stage.show();
     }
 

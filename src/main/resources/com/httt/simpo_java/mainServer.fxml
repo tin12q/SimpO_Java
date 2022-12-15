@@ -5,6 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
 <AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.simpo_java.Main">
    <children>
        <SplitPane dividerPositions="0.5"
@@ -18,22 +19,22 @@
            <items>
                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="800.0">
                    <children>
-                       <Button fx:id="lamDe" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
-                               mnemonicParsing="false" onAction="#lamDeClick" prefHeight="225.0" prefWidth="800.0"
-                               text="Làm đề" AnchorPane.bottomAnchor="0.0"
-                               AnchorPane.leftAnchor="0.0"
-                               AnchorPane.rightAnchor="0.0"
-                               AnchorPane.topAnchor="0.0">
+                       <MFXButton fx:id="lamDe" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                                  mnemonicParsing="false" onAction="#lamDeClick" prefHeight="225.0" prefWidth="800.0"
+                                  text="Làm đề" AnchorPane.bottomAnchor="0.0"
+                                  AnchorPane.leftAnchor="0.0"
+                                  AnchorPane.rightAnchor="0.0"
+                                  AnchorPane.topAnchor="0.0">
                            <font>
                                <Font size="30.0"/>
                            </font>
-                       </Button>
+                       </MFXButton>
                    </children>
                </AnchorPane>
 
                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="800.0">
                    <children>
-                       <Button fx:id="server" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                       <MFXButton fx:id="server" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
                                mnemonicParsing="false" onAction="#serverClick" prefHeight="225.0" prefWidth="800.0"
                                text="Server" AnchorPane.bottomAnchor="0.0"
                                AnchorPane.leftAnchor="0.0"
@@ -42,7 +43,7 @@
                            <font>
                                <Font size="30.0"/>
                            </font>
-                       </Button>
+                       </MFXButton>
                    </children>
                </AnchorPane>
            </items>

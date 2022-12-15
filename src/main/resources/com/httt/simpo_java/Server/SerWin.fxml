@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="900.0" maxWidth="1600.0" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.simpo_java.control.Server.SerWin">
+   <children>
+      <StackPane layoutX="200.0" prefHeight="900.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+            <AnchorPane prefHeight="900.0" prefWidth="1400.0" />
+            <AnchorPane prefHeight="900.0" prefWidth="1400.0" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+         </children></StackPane>
+      <VBox maxHeight="900.0" maxWidth="200.0" prefHeight="900.0" prefWidth="200.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0">
+               <children>
+                  <Label fx:id="IP" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="200.0" text="IP:" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets top="20.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0">
+               <children>
+                  <Label fx:id="IP1" alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="79.0" text="Port" textAlignment="CENTER" textFill="WHITE" wrapText="true" HBox.hgrow="SOMETIMES">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <MFXTextField floatMode="BORDER" prefHeight="49.0" prefWidth="121.0" promptText="Port" style="-fx-background-color: #4d4d4d; -fx-border-color: #4d4d4d;">
+                     <textFill>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </textFill>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </MFXTextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <MFXButton alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Stuff" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </MFXButton>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+               <children>
+                  <MFXButton fx:id="startbtn" alignment="CENTER" onAction="#Start" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Start" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </MFXButton>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="85.0">
+               <children>
+                  <MFXButton alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Obsta" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </MFXButton>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="160.0">
+               <children>
+                  <MFXButton alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Accel" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </MFXButton>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="435.0">
+               <children>
+                  <MFXButton alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Finish" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </MFXButton>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="560.0">
+               <children>
+                  <MFXButton alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Tie" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </MFXButton>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
