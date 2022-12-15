@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="900" prefWidth="1400" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.simpo_java.control.Server.SerWinPane.Stuff">
+   <children>
+      <Button layoutX="346.0" layoutY="232.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>

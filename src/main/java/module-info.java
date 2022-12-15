@@ -16,6 +16,8 @@ module com.httt.simpo_java {
     opens com.httt.simpo_java.control.ExamMaker to javafx.fxml;
     exports com.httt.simpo_java.control.Server;
     opens com.httt.simpo_java.control.Server to javafx.fxml;
+    exports com.httt.simpo_java.control.Server.SerWinPane;
+    opens com.httt.simpo_java.control.Server.SerWinPane to javafx.fxml;
 
 
 }
