@@ -4,8 +4,10 @@ import io.github.palexdev.materialfx.controls.MFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -24,6 +26,15 @@ public class SerWin {
     private AnchorPane ac2;
 
     @FXML
+    private MFXButton accelbtn;
+
+    @FXML
+    private MFXButton finishbtn;
+
+    @FXML
+    private MFXButton initbutton;
+
+    @FXML
     private MFXButton obstabtn;
 
     @FXML
@@ -31,6 +42,9 @@ public class SerWin {
 
     @FXML
     private MFXButton stuffbtn;
+
+    @FXML
+    private MFXButton tiebtn;
 
     @FXML
     void Start(ActionEvent event) {
@@ -42,12 +56,15 @@ public class SerWin {
     @FXML
     private void initialize() {
 
-        stuffbtn.setOnAction(event -> loadPage("Stuff"));
-        obstabtn.setOnAction(event -> loadPage("Obsta"));
-        startbtn.setOnAction(event -> loadPage("Start"));
+        stuffbtn.setOnAction(event -> loadPage("Stuff",event));
+        obstabtn.setOnAction(event -> loadPage("Obsta",event));
+        startbtn.setOnAction(event -> loadPage("Start",event));
+        accelbtn.setOnAction(event -> loadPage("Accel",event));
+        tiebtn.setOnAction(event -> loadPage("Tie", event));
+        finishbtn.setOnAction(event -> loadPage("Finish", event));
 
     }
-    private void loadPage(String name) {
+    private void loadPage(String name,ActionEvent event) {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/httt/simpo_java/Server/SerWinPane/"+name + ".fxml"));
@@ -56,7 +73,8 @@ public class SerWin {
 
             // Set the loaded FXML file as the content of our main right-side pane
             ac1.getChildren().setAll(newPane);
-
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setTitle(name);
             // Reset the anchors
             AnchorPane.setBottomAnchor(newPane, 0.0);
             AnchorPane.setLeftAnchor(newPane, 0.0);

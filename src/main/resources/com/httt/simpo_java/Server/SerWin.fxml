@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import io.github.palexdev.materialfx.controls.MFXButton?>
-<?import io.github.palexdev.materialfx.controls.MFXTextField?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Region?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.text.Font?>
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="900.0" maxWidth="1600.0" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.simpo_java.control.Server.SerWin">
+<AnchorPane maxHeight="900.0" maxWidth="1600.0" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.simpo_java.control.Server.SerWin">
    <children>
       <StackPane layoutX="200.0" prefHeight="900.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -117,7 +112,7 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="160.0">
                <children>
-                  <MFXButton alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Accel" textFill="WHITE">
+                  <MFXButton fx:id="accelbtn" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Accel" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -129,7 +124,7 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="435.0">
                <children>
-                  <MFXButton alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Finish" textFill="WHITE">
+                  <MFXButton fx:id="finishbtn" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Finish" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -141,7 +136,7 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="560.0">
                <children>
-                  <MFXButton alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Tie" textFill="WHITE">
+                  <MFXButton fx:id="tiebtn" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Tie" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -153,7 +148,7 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="132.0">
                <children>
-                  <MFXButton fx:id="stuffbtn1" alignment="CENTER" onAction="#Start" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Init" textFill="WHITE">
+                  <MFXButton fx:id="initbutton" alignment="CENTER" onAction="#Start" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Init" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>

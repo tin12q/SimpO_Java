@@ -40,6 +40,7 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.setX(0);
         stage.setY(0);
+        stage.setTitle("Server");
         stage.show();
     }
 
