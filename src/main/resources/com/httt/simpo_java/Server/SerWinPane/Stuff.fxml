@@ -78,10 +78,10 @@
                   </VBox>
                   <VBox prefWidth="400.0">
                      <children>
-                        <TextField stylesheets="@StuffTf.css" />
-                        <TextField layoutX="10.0" layoutY="10.0" stylesheets="@StuffTf.css" />
-                        <TextField layoutX="10.0" layoutY="36.0" stylesheets="@StuffTf.css" />
-                        <TextField layoutX="10.0" layoutY="36.0" stylesheets="@StuffTf.css" />
+                        <TextField stylesheets="@css/StuffTf.css" />
+                        <TextField layoutX="10.0" layoutY="10.0" stylesheets="@css/StuffTf.css" />
+                        <TextField layoutX="10.0" layoutY="36.0" stylesheets="@css/StuffTf.css" />
+                        <TextField layoutX="10.0" layoutY="36.0" stylesheets="@css/StuffTf.css" />
                      </children>
                   </VBox>
                </children></HBox>
