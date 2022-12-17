@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import io.github.palexdev.materialfx.controls.MFXPaginatedTableView?>
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.httt.simpo_java.control.Server.SerWinPane.Accel"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.simpo_java.control.Server.SerWinPane.Accel">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="47.0" layoutY="67.0" prefHeight="900.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="708.0" prefWidth="1400.0">
+               <children>
+                  <MFXLegacyTableView prefHeight="218.0" prefWidth="248.0" />
+               </children>
+            </HBox>
+             <VBox prefHeight="200.0" prefWidth="1400.0" VBox.vgrow="NEVER">
+                 <children>
+                     
 
+                       </children>
+               <AnchorPane prefHeight="200.0" prefWidth="1400.0">
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin>
+                  <children>
+                       <MFXPaginatedTableView layoutY="-355.0" prefHeight="551.0" prefWidth="1400.0" rowsPerPage="6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-355.0" />
+                  </children>
+               </AnchorPane>
+             </VBox>
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>
