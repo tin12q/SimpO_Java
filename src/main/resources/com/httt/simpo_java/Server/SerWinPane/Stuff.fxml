@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane prefHeight="900" prefWidth="1400" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.simpo_java.control.Server.SerWinPane.Stuff">
+<AnchorPane prefHeight="900" prefWidth="1400" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.simpo_java.control.Server.SerWinPane.Stuff">
    <children>
-      <Button layoutX="346.0" layoutY="232.0" mnemonicParsing="false" text="Button" />
+      <VBox alignment="CENTER" layoutX="69.0" layoutY="64.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Region prefHeight="20.0" prefWidth="40.0" />
+                  <MFXButton fx:id="bChange" prefHeight="107.0" prefWidth="127.0" text="Chuyển đề" />
+                  <Region prefHeight="200.0" prefWidth="500.0" />
+                  <MFXButton fx:id="b1nap" layoutX="10.0" layoutY="10.0" prefHeight="107.0" prefWidth="127.0" style="-fx-border-color: #000000;" text="Nạp ảnh TS" />
+                  <MFXButton fx:id="bChuyen" layoutX="677.0" layoutY="10.0" prefHeight="107.0" prefWidth="127.0" style="-fx-border-color: #000000;" text="Chuyển ảnh" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
