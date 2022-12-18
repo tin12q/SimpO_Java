@@ -37,10 +37,12 @@ public class IpGet {
             for (; a.hasMoreElements(); ) {
                 InetAddress addr = a.nextElement();
                 String tmp = addr.toString();
-                if (tmp.length() < 15 && !tmp.equals("/" + ip) && !tmp.equals("/127.0.0.1")) {
-                    hostIP = tmp.trim().substring(1,tmp.length());
-                    break;
+                    if (tmp.startsWith("/192.168.")) {
+                    ip = tmp.substring(1);
+                    setHostIP(ip);
                 }
+
+
                 //System.out.println(ip+" "+tmp+"  " + hostIP);
             }
         }
