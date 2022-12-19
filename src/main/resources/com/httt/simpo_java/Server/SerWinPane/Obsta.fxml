@@ -1,49 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.simpo_java.control.Server.SerWinPane.Obsta">
    <children>
-      <VBox layoutX="10.0" layoutY="8.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="8.0">
+      <VBox layoutX="10.0" layoutY="8.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="240.0" prefWidth="600.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="240.0" prefWidth="600.0">
                <children>
-                  <MFXButton prefHeight="67.0" prefWidth="86.0" />
-                  <VBox>
+                  <VBox alignment="CENTER">
                      <children>
-                        <HBox>
+                        <MFXButton prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #ff0000;" text="BẮT ĐẦU!" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </MFXButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox spacing="15.0">
                            <children>
-                              <MFXButton prefHeight="67.0" prefWidth="86.0" />
-                              <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="86.0" />
-                              <MFXButton layoutX="96.0" layoutY="10.0" prefHeight="67.0" prefWidth="86.0" />
+                              <MFXButton prefHeight="67.0" prefWidth="319.0" style="-fx-background-color: #00ff00;" text="VƯỢT CHƯỚNG NGẠI VẬT" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font></MFXButton>
+                              <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="103.0" text="Chạy Intro">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></MFXButton>
+                              <MFXButton layoutX="96.0" layoutY="10.0" prefHeight="67.0" prefWidth="166.0" text="Chạy nhạc mở đầu">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></MFXButton>
                            </children>
                         </HBox>
-                        <HBox>
+                        <HBox spacing="15.0">
                            <children>
-                              <MFXButton prefHeight="67.0" prefWidth="86.0" />
-                              <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="86.0" />
-                              <MFXButton layoutX="96.0" layoutY="10.0" prefHeight="67.0" prefWidth="86.0" />
+                              <MFXButton prefHeight="67.0" prefWidth="170.0" text="Scene hàng ngang">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></MFXButton>
+                              <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="150.0" text="Scene Hình ảnh">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></MFXButton>
+                              <MFXButton layoutX="96.0" layoutY="10.0" prefHeight="67.0" prefWidth="120.0" text="Scene trống">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></MFXButton>
                            </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
                         </HBox>
                      </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
                   </VBox>
-                  <VBox prefHeight="240.0" prefWidth="240.0">
+                  <VBox alignment="CENTER" prefHeight="240.0" prefWidth="186.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <HBox prefHeight="80.0" prefWidth="240.0">
+                        <Label prefHeight="32.0" prefWidth="133.0" text="Mở hình ảnh">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="240.0" prefWidth="240.0" HBox.hgrow="NEVER">
+                     <children>
+                        <HBox prefHeight="80.0" prefWidth="240.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <MFXButton prefHeight="80.0" prefWidth="80.0" text="1">
+                              <MFXButton prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="1">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
                               </MFXButton>
                               <Region prefHeight="80.0" prefWidth="80.0" />
-                              <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="80.0" text="2">
+                              <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="2">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
@@ -54,22 +99,25 @@
                         <HBox layoutX="10.0" layoutY="10.0" />
                         <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="240.0">
                            <children>
-                              <MFXButton prefHeight="80.0" prefWidth="80.0" text="TT">
+                              <MFXButton prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="TT">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
                               </MFXButton>
                            </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
                         </HBox>
                         <HBox layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="240.0">
                            <children>
-                              <MFXButton prefHeight="80.0" prefWidth="80.0" text="3">
+                              <MFXButton prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="3">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
                               </MFXButton>
                               <Region prefHeight="80.0" prefWidth="80.0" />
-                              <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="80.0" text="4">
+                              <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="4">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
@@ -77,6 +125,26 @@
                            </children>
                         </HBox>
                      </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="120.0" spacing="15.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <MFXButton prefHeight="60.0" prefWidth="120.0" text="15s cuối">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </MFXButton>
+                        <MFXButton prefHeight="60.0" prefWidth="120.0" text="Mở tất cả">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </MFXButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" right="40.0" />
+                     </HBox.margin>
                   </VBox>
                </children>
             </HBox>
