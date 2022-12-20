@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXRadioButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,13 +12,19 @@
 
 <AnchorPane prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.simpo_java.control.Server.SerWinPane.Obsta">
    <children>
+      <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="60.0" prefWidth="220.0" style="-fx-background-color: #00ff00;" text="VCNV" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </MFXButton>
       <VBox layoutX="10.0" layoutY="8.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="240.0" prefWidth="600.0">
                <children>
-                  <VBox alignment="CENTER">
+                  <VBox alignment="CENTER_LEFT">
                      <children>
-                        <MFXButton prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #ff0000;" text="BẮT ĐẦU!" textFill="WHITE">
+                        <Region prefHeight="53.0" prefWidth="200.0" />
+                        <MFXButton buttonType="RAISED" depthLevel="LEVEL4" prefHeight="145.0" prefWidth="150.0" style="-fx-background-color: #ff0000;" text="BẮT ĐẦU!" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
@@ -31,15 +38,12 @@
                      <children>
                         <HBox spacing="15.0">
                            <children>
-                              <MFXButton prefHeight="67.0" prefWidth="319.0" style="-fx-background-color: #00ff00;" text="VƯỢT CHƯỚNG NGẠI VẬT" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="22.0" />
-                                 </font></MFXButton>
-                              <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="103.0" text="Chạy Intro">
+                              <Region prefHeight="67.0" prefWidth="100.0" />
+                              <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="103.0" text="Chạy Intro">
                                  <font>
                                     <Font size="16.0" />
                                  </font></MFXButton>
-                              <MFXButton layoutX="96.0" layoutY="10.0" prefHeight="67.0" prefWidth="166.0" text="Chạy nhạc mở đầu">
+                              <MFXButton buttonType="RAISED" layoutX="96.0" layoutY="10.0" prefHeight="67.0" prefWidth="166.0" text="Chạy nhạc mở đầu">
                                  <font>
                                     <Font size="16.0" />
                                  </font></MFXButton>
@@ -47,15 +51,15 @@
                         </HBox>
                         <HBox spacing="15.0">
                            <children>
-                              <MFXButton prefHeight="67.0" prefWidth="170.0" text="Scene hàng ngang">
+                              <MFXButton buttonType="RAISED" prefHeight="67.0" prefWidth="170.0" text="Scene hàng ngang">
                                  <font>
                                     <Font size="16.0" />
                                  </font></MFXButton>
-                              <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="150.0" text="Scene Hình ảnh">
+                              <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="150.0" text="Scene Hình ảnh">
                                  <font>
                                     <Font size="16.0" />
                                  </font></MFXButton>
-                              <MFXButton layoutX="96.0" layoutY="10.0" prefHeight="67.0" prefWidth="120.0" text="Scene trống">
+                              <MFXButton buttonType="RAISED" layoutX="96.0" layoutY="10.0" prefHeight="67.0" prefWidth="120.0" text="Scene trống">
                                  <font>
                                     <Font size="16.0" />
                                  </font></MFXButton>
@@ -66,7 +70,7 @@
                         </HBox>
                      </children>
                      <HBox.margin>
-                        <Insets left="10.0" />
+                        <Insets left="30.0" top="20.0" />
                      </HBox.margin>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="240.0" prefWidth="186.0" HBox.hgrow="ALWAYS">
@@ -82,13 +86,13 @@
                      <children>
                         <HBox prefHeight="80.0" prefWidth="240.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <MFXButton prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="1">
+                              <MFXButton buttonType="RAISED" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="1">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
                               </MFXButton>
                               <Region prefHeight="80.0" prefWidth="80.0" />
-                              <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="2">
+                              <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="2">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
@@ -99,7 +103,7 @@
                         <HBox layoutX="10.0" layoutY="10.0" />
                         <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="240.0">
                            <children>
-                              <MFXButton prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="TT">
+                              <MFXButton buttonType="RAISED" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="TT">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
@@ -111,13 +115,13 @@
                         </HBox>
                         <HBox layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="240.0">
                            <children>
-                              <MFXButton prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="3">
+                              <MFXButton buttonType="RAISED" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="3">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
                               </MFXButton>
                               <Region prefHeight="80.0" prefWidth="80.0" />
-                              <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="4">
+                              <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #000000;" text="4">
                                  <font>
                                     <Font size="24.0" />
                                  </font>
@@ -131,12 +135,12 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="120.0" spacing="15.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <MFXButton prefHeight="60.0" prefWidth="120.0" text="15s cuối">
+                        <MFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="120.0" text="15s cuối">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </MFXButton>
-                        <MFXButton prefHeight="60.0" prefWidth="120.0" text="Mở tất cả">
+                        <MFXButton buttonType="RAISED" prefHeight="60.0" prefWidth="120.0" text="Mở tất cả">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -148,10 +152,184 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0" />
-            <HBox prefHeight="100.0" prefWidth="200.0" />
-            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <VBox>
+               <children>
+                  <Label prefHeight="51.0" prefWidth="99.0" text="Câu hỏi ">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="51.0" prefWidth="99.0" text="Trả lời">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="830.0" spacing="15.0">
+                     <children>
+                        <HBox prefHeight="40.0" prefWidth="200.0" spacing="25.0">
+                           <children>
+                              <MFXButton buttonType="RAISED" text="Chạy video">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </MFXButton>
+                              <Label prefHeight="40.0" prefWidth="99.0" text="Thời gian">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="177.0" layoutY="10.0" prefHeight="40.0" prefWidth="135.0" text="0">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="18.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
+                                    <MFXRadioButton AnchorPane.rightAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="50.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
+                                    <MFXRadioButton AnchorPane.rightAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="65.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="18.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
+                                    <MFXRadioButton AnchorPane.rightAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="65.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="18.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
+                                    <MFXRadioButton AnchorPane.rightAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                           <children>
+                              <MFXButton buttonType="RAISED" depthLevel="LEVEL1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="HIện đáp án" HBox.hgrow="ALWAYS" />
+                              <MFXButton buttonType="RAISED" depthLevel="LEVEL1" layoutX="395.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Xác nhận" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <MFXButton buttonType="RAISED" depthLevel="LEVEL4" prefHeight="200.0" prefWidth="200.0" text="Xác nhận" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </MFXButton>
+               </children>
+            </HBox>
          </children>
       </VBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+      <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S1" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S2" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S3" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S4" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

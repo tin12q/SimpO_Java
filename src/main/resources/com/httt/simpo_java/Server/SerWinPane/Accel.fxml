@@ -5,39 +5,41 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.simpo_java.control.Server.SerWinPane.Accel">
    <children>
+      <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="60.0" prefWidth="220.0" style="-fx-background-color: #ffeb00;" text="TĂNG TỐC" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </MFXButton>
       <VBox layoutX="47.0" layoutY="67.0" prefHeight="900.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="1390.0">
+            <HBox prefHeight="122.0" prefWidth="1390.0">
                <children>
                   <VBox prefWidth="250.0" spacing="15.0">
                      <children>
-                        <MFXButton prefHeight="60.0" prefWidth="220.0" style="-fx-background-color: #ffeb00;" text="TĂNG TỐC" textFill="WHITE">
+                        <Region prefHeight="38.0" prefWidth="250.0" />
+                        <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="84.0" prefWidth="250.0" text="Scene đáp án">
                            <font>
-                              <Font name="System Bold" size="30.0" />
-                           </font>
-                        </MFXButton>
-                        <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="250.0" text="Scene đáp án">
-                           <font>
-                              <Font size="22.0" />
+                              <Font size="19.0" />
                            </font>
                         </MFXButton>
                      </children>
                   </VBox>
-                  <VBox spacing="15.0" HBox.hgrow="ALWAYS">
+                  <VBox prefHeight="127.0" prefWidth="1120.0" spacing="15.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <MFXButton text="Mở Intro">
+                        <MFXButton buttonType="RAISED" text="Mở Intro">
                            <font>
-                              <Font size="22.0" />
+                              <Font size="19.0" />
                            </font>
                         </MFXButton>
-                        <MFXButton layoutX="10.0" layoutY="10.0" text="Nhạc mở màn">
+                        <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" text="Nhạc mở màn">
                            <font>
-                              <Font size="22.0" />
+                              <Font size="19.0" />
                            </font>
                         </MFXButton>
                      </children>
@@ -56,26 +58,26 @@
 
                        </children>
                <children>
-                  <HBox spacing="15.0">
+                  <HBox spacing="25.0">
                      <children>
-                        <MFXButton text="Tăng tốc 1">
+                        <MFXButton buttonType="RAISED" text="Tăng tốc 1">
                            <font>
-                              <Font size="22.0" />
+                              <Font size="19.0" />
                            </font>
                         </MFXButton>
-                        <MFXButton text="Tăng tốc 2">
+                        <MFXButton buttonType="RAISED" text="Tăng tốc 2">
                            <font>
-                              <Font size="22.0" />
+                              <Font size="19.0" />
                            </font>
                         </MFXButton>
-                        <MFXButton text="Tăng tốc 3">
+                        <MFXButton buttonType="RAISED" text="Tăng tốc 3">
                            <font>
-                              <Font size="22.0" />
+                              <Font size="19.0" />
                            </font>
                         </MFXButton>
-                        <MFXButton text="Tăng tốc 4">
+                        <MFXButton buttonType="RAISED" text="Tăng tốc 4">
                            <font>
-                              <Font size="22.0" />
+                              <Font size="19.0" />
                            </font>
                         </MFXButton>
                      </children>
@@ -88,53 +90,47 @@
                         <Insets left="10.0" top="10.0" />
                      </VBox.margin>
                      <children>
-                        <MFXButton text="Chạy video">
+                        <MFXButton buttonType="RAISED" text="Chạy video">
                            <font>
-                              <Font size="22.0" />
+                              <Font size="19.0" />
                            </font>
                         </MFXButton>
-                        <Label prefHeight="51.0" prefWidth="99.0" text="Thời gian">
+                        <Label prefHeight="40.0" prefWidth="99.0" text="Thời gian">
                            <font>
-                              <Font size="22.0" />
+                              <Font size="19.0" />
                            </font>
                         </Label>
-                        <Label layoutX="177.0" layoutY="10.0" prefHeight="51.0" prefWidth="135.0" text="0">
+                        <Label layoutX="177.0" layoutY="10.0" prefHeight="40.0" prefWidth="135.0" text="0">
                            <font>
-                              <Font size="22.0" />
+                              <Font size="19.0" />
                            </font>
                         </Label>
                      </children>
                   </HBox>
                </children>
                <VBox.margin>
-                  <Insets top="10.0" />
+                  <Insets top="15.0" />
                </VBox.margin>
              </VBox>
-            <HBox prefHeight="68.0" prefWidth="1390.0">
+            <VBox>
                <children>
                   <Label prefHeight="51.0" prefWidth="99.0" text="Câu hỏi ">
                      <font>
                         <Font size="24.0" />
                      </font>
-                     <HBox.margin>
-                        <Insets left="5.0" />
-                     </HBox.margin>
                   </Label>
-               </children>
-               <VBox.margin>
-                  <Insets left="10.0" top="15.0" />
-               </VBox.margin>
-            </HBox>
-            <VBox prefHeight="231.0" prefWidth="1400.0">
-               <children>
                   <Label prefHeight="51.0" prefWidth="99.0" text="Trả lời">
                      <font>
                         <Font size="24.0" />
                      </font>
-                     <VBox.margin>
-                        <Insets left="5.0" />
-                     </VBox.margin>
                   </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox prefHeight="231.0" prefWidth="1400.0">
+               <children>
                   <HBox prefHeight="100.0" prefWidth="200.0" />
                   <HBox prefHeight="100.0" prefWidth="200.0" />
                   <HBox layoutX="10.0" layoutY="148.0" prefHeight="100.0" prefWidth="200.0" />
@@ -224,6 +220,5 @@
             </HBox>
          </children>
       </VBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

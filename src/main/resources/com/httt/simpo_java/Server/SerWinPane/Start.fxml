@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -14,18 +15,12 @@
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="102.0" prefWidth="1400.0" spacing="15.0">
                <children>
-                  <MFXButton fx:id="btn1" prefHeight="61.0" prefWidth="171.0" style="-fx-background-color: #0000ff;" text="KHỞI ĐỘNG" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="22.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin></MFXButton>
-                  <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Intro">
+                  <Region prefHeight="102.0" prefWidth="220.0" />
+                  <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Intro">
                      <font>
                         <Font size="22.0" />
                      </font></MFXButton>
-                  <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="210.0" text="Nhạc BẮT ĐẦU">
+                  <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="210.0" text="Nhạc BẮT ĐẦU">
                      <font>
                         <Font size="22.0" />
                      </font></MFXButton>
@@ -36,28 +31,28 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="36.0" prefWidth="1400.0">
                <children>
-                  <MFXButton prefHeight="61.0" prefWidth="171.0" text="Lượt 1">
+                  <MFXButton buttonType="RAISED" prefHeight="61.0" prefWidth="171.0" text="Lượt 1">
                      <font>
                         <Font size="22.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin></MFXButton>
-                  <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Lượt 2">
+                  <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Lượt 2">
                      <font>
                         <Font size="22.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin></MFXButton>
-                  <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Lượt 3">
+                  <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Lượt 3">
                      <font>
                         <Font size="22.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin></MFXButton>
-                  <MFXButton layoutX="181.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Lượt 4">
+                  <MFXButton buttonType="RAISED" layoutX="181.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Lượt 4">
                      <font>
                         <Font size="22.0" />
                      </font>
@@ -74,21 +69,21 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="110.0" prefHeight="54.0" prefWidth="1400.0">
                <children>
-                  <MFXButton prefHeight="61.0" prefWidth="171.0" text="Button">
+                  <MFXButton buttonType="RAISED" prefHeight="61.0" prefWidth="171.0" text="Button">
                      <font>
                         <Font size="22.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin></MFXButton>
-                  <MFXButton layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Button">
+                  <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Button">
                      <font>
                         <Font size="22.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin></MFXButton>
-                  <MFXButton layoutX="181.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="BẮT ĐẦU">
+                  <MFXButton buttonType="RAISED" layoutX="181.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="BẮT ĐẦU">
                      <font>
                         <Font size="22.0" />
                      </font>
@@ -192,5 +187,10 @@
             </HBox>
          </children>
       </VBox>
+      <MFXButton fx:id="btn1" buttonType="RAISED" depthLevel="LEVEL5" prefHeight="60.0" prefWidth="220.0" style="-fx-background-color: #0000ff;" text="KHỞI ĐỘNG" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </MFXButton>
    </children>
 </AnchorPane>
