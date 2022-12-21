@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.HTTT</groupId>
-    <artifactId>SimpO_Server</artifactId>
+    <artifactId>Client</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>SimpO_Java</name>
+    <name>Client</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -114,7 +114,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.httt.simpo_java/com.httt.server.Main</mainClass>
+                            <mainClass>com.httt.client/com.httt.client.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

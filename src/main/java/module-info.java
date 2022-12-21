@@ -10,14 +10,14 @@ module com.httt.simpo_java {
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
     requires MaterialFX;
-    opens com.httt.simpo_java to javafx.fxml;
-    exports com.httt.simpo_java;
-    exports com.httt.simpo_java.control.ExamMaker;
-    opens com.httt.simpo_java.control.ExamMaker to javafx.fxml;
-    exports com.httt.simpo_java.control.Server;
-    opens com.httt.simpo_java.control.Server to javafx.fxml;
-    exports com.httt.simpo_java.control.Server.SerWinPane;
-    opens com.httt.simpo_java.control.Server.SerWinPane to javafx.fxml;
+    opens com.httt.server to javafx.fxml;
+    exports com.httt.server;
+    exports com.httt.server.control.ExamMaker;
+    opens com.httt.server.control.ExamMaker to javafx.fxml;
+    exports com.httt.server.control.Server;
+    opens com.httt.server.control.Server to javafx.fxml;
+    exports com.httt.server.control.Server.SerWinPane;
+    opens com.httt.server.control.Server.SerWinPane to javafx.fxml;
 
 
 }
