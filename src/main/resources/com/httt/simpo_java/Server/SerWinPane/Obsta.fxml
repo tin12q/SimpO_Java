@@ -235,10 +235,10 @@
                               </AnchorPane>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                        <HBox alignment="CENTER" maxWidth="900.0" spacing="15.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <MFXButton buttonType="RAISED" depthLevel="LEVEL1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="HIện đáp án" HBox.hgrow="ALWAYS" />
-                              <MFXButton buttonType="RAISED" depthLevel="LEVEL1" layoutX="395.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Xác nhận" HBox.hgrow="ALWAYS" />
+                              <MFXButton buttonType="RAISED" depthLevel="LEVEL1" maxWidth="400.0" rippleAnimationSpeed="0.0" text="HIện đáp án" HBox.hgrow="ALWAYS" />
+                              <MFXButton buttonType="RAISED" depthLevel="LEVEL1" layoutX="395.0" layoutY="10.0" maxWidth="400.0" rippleAnimationSpeed="0.0" text="Xác nhận" HBox.hgrow="ALWAYS" />
                            </children>
                         </HBox>
                      </children>

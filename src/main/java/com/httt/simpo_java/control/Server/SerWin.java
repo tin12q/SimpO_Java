@@ -90,7 +90,6 @@ public class SerWin {
                 System.out.println(stage.getTitle());
             }
 
-
         } catch (IOException e) {
             e.printStackTrace();
         }

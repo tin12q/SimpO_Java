@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.simpo_java.control.Server.SerWinPane.Finish">
    <children>
       <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="60.0" prefWidth="220.0" style="-fx-background-color: #ff0000;" text="Về đích" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -26,12 +25,12 @@
                      <children>
                         <MFXButton buttonType="RAISED" text="Intro">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="20.0" />
                            </font>
                         </MFXButton>
                         <MFXButton buttonType="RAISED" text="Mở nhạc khai màn">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="20.0" />
                            </font>
                         </MFXButton>
                      </children>
@@ -43,12 +42,12 @@
                            <children>
                               <MFXButton buttonType="RAISED" depthLevel="LEVEL3" style="-fx-border-color: #000000;" text="Scene chọn điểm">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </MFXButton>
                               <MFXButton buttonType="RAISED" depthLevel="LEVEL3" style="-fx-border-color: #000000;" text="Scene chọn câu hỏi">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </MFXButton>
                            </children>
@@ -57,12 +56,12 @@
                            <children>
                               <MFXButton buttonType="RAISED" depthLevel="LEVEL3" style="-fx-border-color: #000000;" text="Scene câu hỏi">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </MFXButton>
                               <MFXButton buttonType="RAISED" depthLevel="LEVEL3" style="-fx-border-color: #000000;" text="Scene Media">
                                  <font>
-                                    <Font size="16.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </MFXButton>
                            </children>
@@ -83,22 +82,22 @@
                      <children>
                         <MFXButton buttonType="RAISED" text="Thí sinh 1">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="20.0" />
                            </font>
                         </MFXButton>
                         <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" text="Thí sinh 2">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="20.0" />
                            </font>
                         </MFXButton>
                         <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" text="Thí sinh 3">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="20.0" />
                            </font>
                         </MFXButton>
                         <MFXButton buttonType="RAISED" layoutX="159.0" layoutY="10.0" text="Thí sinh 4">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="20.0" />
                            </font>
                         </MFXButton>
                      </children>
@@ -107,12 +106,12 @@
                      <children>
                         <MFXButton buttonType="RAISED" text="Hiện câu hỏi">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="20.0" />
                            </font>
                         </MFXButton>
                         <MFXButton buttonType="RAISED" text="Kết thúc lượt">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="20.0" />
                            </font>
                         </MFXButton>
                      </children>
@@ -159,17 +158,17 @@
                      <children>
                         <MFXButton buttonType="RAISED" text="Mở Clip/Ảnh" HBox.hgrow="ALWAYS">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="20.0" />
                            </font>
                         </MFXButton>
                         <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" text="Nhạc thực hành" HBox.hgrow="ALWAYS">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="20.0" />
                            </font>
                         </MFXButton>
                         <MFXButton buttonType="RAISED" layoutX="124.0" layoutY="10.0" text="Button" HBox.hgrow="ALWAYS">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="20.0" />
                            </font>
                         </MFXButton>
                      </children>
@@ -178,55 +177,58 @@
                      <children>
                         <MFXButton buttonType="RAISED" text="Bắt đầu suy nghĩ" HBox.hgrow="ALWAYS">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="20.0" />
                            </font>
                         </MFXButton>
                         <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" text="Bắt đầu thực hành" HBox.hgrow="ALWAYS">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="20.0" />
                            </font>
                         </MFXButton>
                         <MFXButton buttonType="RAISED" layoutX="124.0" layoutY="10.0" text="Bắt đầu lại thực hành" HBox.hgrow="ALWAYS">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="20.0" />
                            </font>
                         </MFXButton>
                      </children>
                   </HBox>
                   <HBox layoutX="10.0" layoutY="187.0" prefHeight="50.0" prefWidth="1400.0" spacing="20.0">
                      <children>
-                        <MFXButton buttonType="RAISED" text="Đúng" HBox.hgrow="ALWAYS">
+                        <MFXButton buttonType="RAISED" style="-fx-background-color: #00ff00;" text="Đúng" textFill="WHITE" HBox.hgrow="ALWAYS">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="26.0" />
                            </font>
                         </MFXButton>
-                        <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" text="Sai" HBox.hgrow="ALWAYS">
+                        <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" style="-fx-background-color: #ff0000;" text="Sai" textFill="WHITE" HBox.hgrow="ALWAYS">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="26.0" />
                            </font>
                         </MFXButton>
                         <Region prefHeight="50.0" prefWidth="286.0" />
                         <MFXButton buttonType="RAISED" layoutX="124.0" layoutY="10.0" text="Hút sai" HBox.hgrow="ALWAYS">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="26.0" />
                            </font>
                         </MFXButton>
-                        <MFXButton buttonType="RAISED" layoutX="238.0" layoutY="10.0" text="SAI" HBox.hgrow="ALWAYS">
+                        <MFXButton buttonType="RAISED" layoutX="238.0" layoutY="10.0" style="-fx-background-color: #ff0000;" text="SAI" textFill="WHITE" HBox.hgrow="ALWAYS">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="26.0" />
                            </font>
                         </MFXButton>
                         <MFXButton buttonType="RAISED" layoutX="352.0" layoutY="10.0" text="Hút đúng" HBox.hgrow="ALWAYS">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="26.0" />
                            </font>
                         </MFXButton>
                         <MFXButton buttonType="RAISED" layoutX="466.0" layoutY="10.0" text="Thí sinh 1" HBox.hgrow="ALWAYS">
                            <font>
-                              <Font size="16.0" />
+                              <Font size="26.0" />
                            </font>
                         </MFXButton>
                      </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
                   </HBox>
                </children>
                <VBox.margin>
