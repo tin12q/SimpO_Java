@@ -8,13 +8,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.httt.server.control.ExamMaker.ExamWindow"
-            prefHeight="900.0" prefWidth="1600.0">
-    <children>
-
-    </children>
+            fx:controller="com.httt.client.control.diemWin.diemWin"
+            prefHeight="400.0" prefWidth="600.0">
 
 </AnchorPane>
-
-
-

@@ -23,7 +23,7 @@ public class Main extends Application {
     @FXML
     void lamDeClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/com/httt/server/ExamMaker/ExamWindow.fxml"));
+        loader.setLocation(getClass().getResource("/com/httt/server/ExamMaker/examMaker.fxml"));
         Parent content = loader.load();
 
         Scene scene = new Scene(content);
