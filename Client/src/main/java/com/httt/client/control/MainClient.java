@@ -28,58 +28,35 @@ public class MainClient {
     @FXML
     private void initialize() throws IOException {
 
-        clientBtn.setOnAction(event -> {
-            try {
-                loadPage("/clientWin/clientWin",event);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
-        diemBtn.setOnAction(event -> {
-            try {
-                loadPage("/diemWin/diemtWin",event);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
-        mcBtn.setOnAction(event -> {
-            try {
-                loadPage("/mcWin/mcWin",event);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
-        mcBtn.setOnAction(event -> {
-            try {
-                loadPage("/mcWin/mcWin",event);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
-        viewerBtn.setOnAction(event -> {
-            try {
-                loadPage("/viewerWin/viewerWin",event);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
+        viewerBtn.setOnAction(event ->loadPage("/viewerWin/viewerWin",event));
+        clientBtn.setOnAction(event ->loadPage("/clientWin/ClientWin",event));
+        diemBtn.setOnAction(event -> loadPage("/diemWin/diemWin",event));
+        mcBtn.setOnAction(event -> loadPage("/mcWin/mcWin",event));
+        mcBtn.setOnAction(event -> loadPage("/mcWin/mcWin",event));
+        viewerBtn.setOnAction(event -> loadPage("/viewerWin/viewerWin",event));
+
 
 
     }
 
-    private void loadPage(String page, ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/com/httt/client"+page+".fxml"));
-        Parent content = loader.load();
+    private void loadPage(String page, ActionEvent event)  {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/com/httt/client"+page+".fxml"));
+            Parent content = loader.load();
 
-        Scene scene = new Scene(content);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(content);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        stage.setScene(scene);
-        stage.setX(0);
-        stage.setY(0);
-        stage.setTitle("Server");
-        stage.show();
+            stage.setScene(scene);
+            stage.setX(0);
+            stage.setY(0);
+            stage.setTitle("Client");
+            stage.show();
+        }
+        catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

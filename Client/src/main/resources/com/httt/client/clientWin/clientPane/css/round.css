@@ -1,0 +1,41 @@
+
+    .label {
+        -fx-background-color: #2F3954;
+        -fx-background-radius: 10;
+
+        -fx-border-radius: 10;
+        -fx-border-width: 2;
+        -fx-text-fill: #F4F5FC;
+    }
+    .text-field {
+        -fx-background-color: #2F3954;
+        -fx-background-radius: 10;
+
+        -fx-border-radius: 10;
+        -fx-border-width: 2;
+        -fx-background-insets: 0, 0 0 1 0 ;
+        -fx-text-fill: #F4F5FC;
+
+    }
+    .text-field:focused {
+        -fx-background-color: -fx-focus-color, -fx-background ;
+    }
+    .mfx-textfild{
+        -fx-background-color: #2F3954;
+
+        -fx-text-fill: #F4F5FC;
+    }
+    .mfx-button{
+        -fx-background-color: #2F3954;
+
+        -fx-text-fill: #F4F5FC;
+    }
+    .mfx-textfield:focused {
+        -fx-background-color: -fx-focus-color, -fx-background ;
+    }
+    /*  BG #24293E
+        Ac #8EBBFF
+        Te #F4F5FC
+        Se #СССССС
+
+     */
