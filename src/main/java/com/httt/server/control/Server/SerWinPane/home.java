@@ -1,4 +1,5 @@
 package com.httt.server.control.Server.SerWinPane;
 
-public class Tie {
+public class home {
+
 }
