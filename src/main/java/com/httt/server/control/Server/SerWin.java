@@ -17,22 +17,13 @@ public class SerWin {
     private Label IP;
 
     @FXML
-    private Label IP1;
-
-    @FXML
     private AnchorPane ac1;
-
-    @FXML
-    private AnchorPane ac2;
 
     @FXML
     private MFXButton accelbtn;
 
     @FXML
     private MFXButton finishbtn;
-
-    @FXML
-    private MFXButton initbutton;
 
     @FXML
     private MFXButton obstabtn;
@@ -48,24 +39,19 @@ public class SerWin {
 
     @FXML
     void Start(ActionEvent event) {
-        IP.setText("IP: "+new IpGet().getHostIP());
+        IP.setText("IP: " + new IpGet().getHostIP());
     }
-
-
-
+    
     @FXML
     private void initialize() {
-
-        stuffbtn.setOnAction(event -> loadPage("Stuff",event));
-        obstabtn.setOnAction(event -> loadPage("Obsta",event));
-        startbtn.setOnAction(event -> loadPage("Start",event));
-        accelbtn.setOnAction(event -> loadPage("Accel",event));
-        tiebtn.setOnAction(event -> loadPage("Tie", event));
-        finishbtn.setOnAction(event -> loadPage("Finish", event));
-
+        stuffbtn.setOnAction(event -> loadPage("home", event));
+        obstabtn.setOnAction(event -> loadPage("obstacleRound", event));
+        startbtn.setOnAction(event -> loadPage("warmUpRound", event));
+        accelbtn.setOnAction(event -> loadPage("speedUpRound", event));
+        tiebtn.setOnAction(event -> loadPage("tieBreakRound", event));
+        finishbtn.setOnAction(event -> loadPage("finishRound", event));
     }
-    private void loadPage(String name,ActionEvent event) {
-
+    private void loadPage(String name, ActionEvent event) {
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             if(stage.getTitle().equals(name))
@@ -73,7 +59,7 @@ public class SerWin {
                 return;
             }
             else {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/httt/server/Server/SerWinPane/" +name + ".fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/httt/server/Server/SerWinPane/" + name + ".fxml"));
 
                 AnchorPane newPane = loader.load();
 
@@ -89,7 +75,6 @@ public class SerWin {
                 System.out.println("Loaded " + name + " page");
                 System.out.println(stage.getTitle());
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
