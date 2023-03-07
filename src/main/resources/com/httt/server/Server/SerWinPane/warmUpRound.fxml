@@ -31,28 +31,28 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="36.0" prefWidth="1400.0">
                <children>
-                  <MFXButton buttonType="RAISED" prefHeight="61.0" prefWidth="171.0" text="Lượt 1">
+                  <MFXButton buttonType="RAISED" onAction="#changeTurn1" prefHeight="61.0" prefWidth="171.0" text="Lượt 1">
                      <font>
                         <Font size="22.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin></MFXButton>
-                  <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Lượt 2">
+                  <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#changeTurn2" prefHeight="61.0" prefWidth="171.0" text="Lượt 2">
                      <font>
                         <Font size="22.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin></MFXButton>
-                  <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Lượt 3">
+                  <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#changeTurn3" prefHeight="61.0" prefWidth="171.0" text="Lượt 3">
                      <font>
                         <Font size="22.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin></MFXButton>
-                  <MFXButton buttonType="RAISED" layoutX="181.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Lượt 4">
+                  <MFXButton buttonType="RAISED" layoutX="181.0" layoutY="10.0" onAction="#changeTurn4" prefHeight="61.0" prefWidth="171.0" text="Lượt 4">
                      <font>
                         <Font size="22.0" />
                      </font>
@@ -69,14 +69,14 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="110.0" prefHeight="54.0" prefWidth="1400.0">
                <children>
-                  <MFXButton buttonType="RAISED" prefHeight="61.0" prefWidth="171.0" rippleColor="WHITE" text="Đúng">
+                  <MFXButton buttonType="RAISED" onAction="#correctAnswer" prefHeight="61.0" prefWidth="171.0" rippleColor="WHITE" text="Đúng">
                      <font>
                         <Font size="22.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin></MFXButton>
-                  <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Sai">
+                  <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#wrongAnswer" prefHeight="61.0" prefWidth="171.0" text="Sai">
                      <font>
                         <Font size="22.0" />
                      </font>
@@ -111,12 +111,12 @@
                <children>
                   <VBox alignment="BOTTOM_CENTER" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S1" VBox.vgrow="ALWAYS">
+                        <Label fx:id="nameOfS1" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S1" VBox.vgrow="ALWAYS">
                            <font>
                               <Font size="42.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                        <Label fx:id="scoreOfS1" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                            <font>
                               <Font size="42.0" />
                            </font>
@@ -131,12 +131,12 @@
                   </VBox>
                   <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S2" VBox.vgrow="ALWAYS">
+                        <Label fx:id="nameOfS2" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S2" VBox.vgrow="ALWAYS">
                            <font>
                               <Font size="42.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                        <Label fx:id="scoreOfS2" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                            <font>
                               <Font size="42.0" />
                            </font>
@@ -148,7 +148,7 @@
                   </VBox>
                   <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S3" VBox.vgrow="ALWAYS">
+                        <Label fx:id="nameOfS3" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S3" VBox.vgrow="ALWAYS">
                            <font>
                               <Font size="42.0" />
                            </font>
@@ -156,7 +156,7 @@
                               <Insets />
                            </VBox.margin>
                         </Label>
-                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                        <Label fx:id="scoreOfS3" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                            <font>
                               <Font size="42.0" />
                            </font>
@@ -168,12 +168,12 @@
                   </VBox>
                   <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                      <children>
-                        <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S4" VBox.vgrow="ALWAYS">
+                        <Label fx:id="nameOfS4" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S4" VBox.vgrow="ALWAYS">
                            <font>
                               <Font size="42.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                        <Label fx:id="scoreOfS4" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                            <font>
                               <Font size="42.0" />
                            </font>
