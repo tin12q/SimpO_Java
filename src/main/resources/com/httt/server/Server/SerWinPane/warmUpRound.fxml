@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="900" prefWidth="1400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.server.control.Server.SerWinPane.Start">
+<AnchorPane prefHeight="900" prefWidth="1400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.server.control.Server.SerWinPane.warmUpRound">
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -69,14 +69,14 @@
             </HBox>
             <HBox layoutX="10.0" layoutY="110.0" prefHeight="54.0" prefWidth="1400.0">
                <children>
-                  <MFXButton buttonType="RAISED" prefHeight="61.0" prefWidth="171.0" text="Button">
+                  <MFXButton buttonType="RAISED" prefHeight="61.0" prefWidth="171.0" rippleColor="WHITE" text="Đúng">
                      <font>
                         <Font size="22.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin></MFXButton>
-                  <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Button">
+                  <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="171.0" text="Sai">
                      <font>
                         <Font size="22.0" />
                      </font>

@@ -84,7 +84,7 @@
             </HBox>
             <HBox alignment="CENTER">
                <children>
-                  <MFXButton fx:id="stuffbtn" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Stuff" textFill="WHITE">
+                  <MFXButton fx:id="stuffbtn" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Home" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -96,7 +96,7 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
                <children>
-                  <MFXButton fx:id="startbtn" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Start" textFill="WHITE">
+                  <MFXButton fx:id="startbtn" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Warm up" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -108,7 +108,7 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="85.0">
                <children>
-                  <MFXButton fx:id="obstabtn" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Obsta" textFill="WHITE">
+                  <MFXButton fx:id="obstabtn" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Obstacle" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -120,7 +120,7 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="160.0">
                <children>
-                  <MFXButton fx:id="accelbtn" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Accel" textFill="WHITE">
+                  <MFXButton fx:id="accelbtn" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;" text="Speed up" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>

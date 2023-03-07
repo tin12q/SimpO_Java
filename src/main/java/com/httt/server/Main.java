@@ -19,7 +19,6 @@ public class Main extends Application {
     @FXML
     private MFXButton server;
 
-
     @FXML
     void lamDeClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
@@ -61,7 +60,6 @@ public class Main extends Application {
         stage.setTitle("Main");
         stage.sizeToScene();
         stage.show();
-
     }
 
     public static void main(String[] args) {

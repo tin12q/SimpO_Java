@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.server.control.Server.SerWinPane.Tie">
+<AnchorPane prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.server.control.Server.SerWinPane.tieBreakRound">
    <children>
       <MFXButton buttonType="RAISED" depthLevel="LEVEL5" layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="220.0" style="-fx-background-color: #A020F0;" text="Câu hỏi phụ" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
