@@ -34,10 +34,10 @@
                   </Label>
                </children>
             </HBox>
-            <StackPane alignment="CENTER_RIGHT">
+            <StackPane alignment="CENTER_RIGHT" VBox.vgrow="ALWAYS">
                <children>
                   <AnchorPane fx:id="ac1" prefHeight="720.0" prefWidth="1600.0" />
-                  <MFXProgressBar prefHeight="50.0" prefWidth="720.0" progress="0.68" style="-fx-rotate: 90;">
+                  <MFXProgressBar fx:id="timerBar" minWidth="500.0" prefHeight="50.0" prefWidth="720.0" progress="0.0" style="-fx-rotate: 90;">
                      <StackPane.margin>
                         <Insets right="-335.0" />
                      </StackPane.margin>
@@ -46,19 +46,19 @@
             </StackPane>
             <HBox prefHeight="50.0">
                <children>
-                  <Label prefHeight="50.0" prefWidth="958.0" style="-fx-border-color: black;" text="Label">
+                  <Label prefHeight="50.0" prefWidth="958.0" style="-fx-border-color: black;" text="Label" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="26.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="50.0" prefWidth="647.0" style="-fx-border-color: black;" text="Label">
+                  <Label prefHeight="50.0" prefWidth="647.0" style="-fx-border-color: black;" text="Label" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="26.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <TextField fx:id="answerTf" alignment="CENTER" prefHeight="80.0">
+            <TextField fx:id="answerTf" alignment="CENTER" prefHeight="80.0" VBox.vgrow="ALWAYS">
                <font>
                   <Font size="26.0" />
                </font>
