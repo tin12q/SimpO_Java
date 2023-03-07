@@ -1,6 +1,6 @@
 package com.httt.client.control.clientWin;
 
-<<<<<<< HEAD:Client/src/main/java/com/httt/client/control/clientWin/ClientWin.java
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,19 +10,18 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ClientWin {
+public class PlayerWin {
     @FXML
     private AnchorPane ac1;
+
     private void loadPage(String name, ActionEvent event) {
 
         try {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            if(stage.getTitle().equals(name))
-            {
+            if (stage.getTitle().equals(name)) {
                 return;
-            }
-            else {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/httt/client/clientWin/clientPane/" +name + ".fxml"));
+            } else {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/httt/client/clientWin/clientPane/" + name + ".fxml"));
 
                 AnchorPane newPane = loader.load();
 
@@ -43,7 +42,4 @@ public class ClientWin {
             e.printStackTrace();
         }
     }
-=======
-public class PlayerWin {
->>>>>>> 4b5193fefe5cc2aceb7037526b203cd22ab52e58:Client/src/main/java/com/httt/client/control/clientWin/PlayerWin.java
 }
