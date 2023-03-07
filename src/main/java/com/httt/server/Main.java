@@ -14,12 +14,6 @@ import java.io.IOException;
 
 public class Main extends Application {
     @FXML
-    private MFXButton lamDe;
-
-    @FXML
-    private MFXButton server;
-
-    @FXML
     void lamDeClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/com/httt/server/ExamMaker/examMaker.fxml"));
@@ -29,8 +23,7 @@ public class Main extends Application {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         stage.setScene(scene);
-        stage.setX(0);
-        stage.setY(0);
+        stage.setX(0); stage.setY(0);
         stage.setTitle("Exam Maker");
         stage.show();
     }
@@ -44,8 +37,7 @@ public class Main extends Application {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         stage.setScene(scene);
-        stage.setX(0);
-        stage.setY(0);
+        stage.setX(0); stage.setY(0);
         stage.setTitle("Server");
         stage.show();
     }
@@ -63,8 +55,6 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-
         launch();
     }
 }
