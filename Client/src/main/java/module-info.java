@@ -22,4 +22,8 @@ module com.httt.client {
     exports com.httt.client.control.viewerWin;
     opens com.httt.client.control.diemWin to javafx.fxml;
     exports com.httt.client.control.diemWin;
+    opens com.httt.client.control.clientWin.clientPane to javafx.fxml;
+    exports com.httt.client.control.clientWin.clientPane;
+    opens com.httt.client.control.clientWin.Pane to javafx.fxml;
+    exports com.httt.client.control.clientWin.Pane;
 }
