@@ -30,13 +30,28 @@ public class PlayerWin {
     private int timerSeconds = 0;
     @FXML
     protected void initialize() throws IOException {
-        loadPage("warmUp",new ActionEvent());
+        loadPage("warmUp", new ActionEvent());
         //TimerThread t1 = new TimerThread(10000);
         //t1.run();
 
 
-        TimerThread t1 = new TimerThread(10000);
+        TimerThread t1 = new TimerThread(20);
         t1.start();
+        answerTf.setOnKeyPressed(event -> {
+            switch (event.getCode()) {
+                case ENTER:
+                    answerTf.setPromptText("Enter pressed");
+                    answerTf.setText("");
+
+                    break;
+                case ESCAPE:
+                    System.out.println("Escape pressed");
+                    break;
+                default:
+                    break;
+            }
+        });
+
     }
     class TimerThread extends Thread{
         int duration;
@@ -47,15 +62,16 @@ public class PlayerWin {
         }
 
         public TimerThread(int duration){
-            this.duration = duration;
+            this.duration = duration*1000;
         }
         @Override
         public void run(){
-            timeline = new Timeline(new KeyFrame(Duration.millis(1), event -> {
-                timerSeconds++;
+
+            timeline = new Timeline(new KeyFrame(Duration.millis(10), event -> {
+                timerSeconds+=10;
                 currentSeconds = (double) timerSeconds / 1000;
                 System.out.println(currentSeconds);
-                timerBar.setProgress((double) timerSeconds / 10000);
+                timerBar.setProgress((double) timerSeconds / duration);
                 if(timerSeconds==duration){
                     timeline.stop();
                     timerSeconds=0;
