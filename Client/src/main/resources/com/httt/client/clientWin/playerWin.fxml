@@ -1,48 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import io.github.palexdev.materialfx.controls.MFXProgressBar?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.client.control.clientWin.PlayerWin">
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.client.control.clientWin.PlayerWin">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox prefHeight="50.0">
                <children>
-                  <Label fx:id="s1Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" HBox.hgrow="ALWAYS">
+                  <Label fx:id="s1Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" styleClass="label-card" stylesheets="@Pane/css/label-card.css" text="0" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Label fx:id="s2Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" HBox.hgrow="ALWAYS">
+                  <Label fx:id="s2Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" styleClass="label-card" stylesheets="@Pane/css/label-card.css" text="0" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Label fx:id="s3Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" HBox.hgrow="ALWAYS">
+                  <Label fx:id="s3Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" styleClass="label-card" stylesheets="@Pane/css/label-card.css" text="0" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Label fx:id="s4Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" HBox.hgrow="ALWAYS">
+                  <Label fx:id="s4Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" styleClass="label-card" stylesheets="@Pane/css/label-card.css" text="0" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <StackPane alignment="CENTER_RIGHT">
+            <StackPane fx:id="st1" alignment="CENTER_RIGHT" VBox.vgrow="ALWAYS">
                <children>
-                  <AnchorPane prefHeight="720.0" prefWidth="1600.0" />
-                  <MFXProgressBar prefHeight="50.0" prefWidth="720.0" progress="0.68" style="-fx-rotate: 90;">
+                  <AnchorPane fx:id="ac1" prefHeight="720.0" prefWidth="1600.0" />
+                  <MFXProgressBar fx:id="timerBar" minWidth="500.0" prefHeight="50.0" prefWidth="720.0" progress="0.0" style="-fx-rotate: 90;">
                      <StackPane.margin>
                         <Insets right="-335.0" />
                      </StackPane.margin>
@@ -51,19 +46,23 @@
             </StackPane>
             <HBox prefHeight="50.0">
                <children>
-                  <Label prefHeight="50.0" prefWidth="958.0" style="-fx-border-color: black;" text="Label">
+                  <Label fx:id="currentName" alignment="CENTER" prefHeight="50.0" prefWidth="958.0" styleClass="label-card" stylesheets="@Pane/css/label-card.css" text="Label" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="26.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="50.0" prefWidth="647.0" style="-fx-border-color: black;" text="Label">
+                  <Label fx:id="currentPoint" alignment="CENTER" prefHeight="50.0" prefWidth="647.0" styleClass="label-card" stylesheets="@Pane/css/label-card.css" text="Label" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="26.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <TextArea prefHeight="80.0" />
+            <TextField fx:id="answerTf" alignment="CENTER" prefHeight="80.0" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </TextField>
          </children>
       </VBox>
    </children>

@@ -29,7 +29,7 @@ public class MainClient {
     private void initialize() throws IOException {
 
         viewerBtn.setOnAction(event ->loadPage("/viewerWin/viewerWin",event));
-        clientBtn.setOnAction(event ->loadPage("/clientWin/ClientWin",event));
+        clientBtn.setOnAction(event ->loadPage("/clientWin/playerWin",event));
         diemBtn.setOnAction(event -> loadPage("/diemWin/diemWin",event));
         mcBtn.setOnAction(event -> loadPage("/mcWin/mcWin",event));
         mcBtn.setOnAction(event -> loadPage("/mcWin/mcWin",event));
