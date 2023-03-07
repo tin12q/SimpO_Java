@@ -18,17 +18,17 @@ public class warmUpRound extends updateInformation {
     }
 
     int turnID = 0;
-    @FXML private void changeTurn1() {turnID = 0;}
-    @FXML private void changeTurn2() {turnID = 1;}
-    @FXML private void changeTurn3() {turnID = 2;}
-    @FXML private void changeTurn4() {turnID = 3;}
+    @FXML private void changeTurn1(ActionEvent event) throws IOException {turnID = 0;}
+    @FXML private void changeTurn2(ActionEvent event) throws IOException {turnID = 1;}
+    @FXML private void changeTurn3(ActionEvent event) throws IOException {turnID = 2;}
+    @FXML private void changeTurn4(ActionEvent event) throws IOException {turnID = 3;}
 
-    @FXML private void correctAnswer() {
+    @FXML private void correctAnswer(ActionEvent event) throws IOException {
         participants.changePoint(turnID, 10);
         updateScore(turnID, scoreOfS1, scoreOfS2, scoreOfS3, scoreOfS4);
     }
 
-    @FXML private void wrongAnswer() {
+    @FXML private void wrongAnswer(ActionEvent event) throws IOException {
         participants.changePoint(turnID, -5);
         updateScore(turnID, scoreOfS1, scoreOfS2, scoreOfS3, scoreOfS4);
     }
