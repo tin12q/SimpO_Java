@@ -12,29 +12,29 @@
          <children>
             <HBox prefHeight="50.0">
                <children>
-                  <Label fx:id="s1Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" HBox.hgrow="ALWAYS">
+                  <Label fx:id="s1Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" styleClass="label-card" stylesheets="@Pane/css/label-card.css" text="0" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Label fx:id="s2Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" HBox.hgrow="ALWAYS">
+                  <Label fx:id="s2Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" styleClass="label-card" stylesheets="@Pane/css/label-card.css" text="0" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Label fx:id="s3Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" HBox.hgrow="ALWAYS">
+                  <Label fx:id="s3Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" styleClass="label-card" stylesheets="@Pane/css/label-card.css" text="0" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Label fx:id="s4Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" HBox.hgrow="ALWAYS">
+                  <Label fx:id="s4Lb" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" styleClass="label-card" stylesheets="@Pane/css/label-card.css" text="0" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <StackPane alignment="CENTER_RIGHT" VBox.vgrow="ALWAYS">
+            <StackPane fx:id="st1" alignment="CENTER_RIGHT" VBox.vgrow="ALWAYS">
                <children>
                   <AnchorPane fx:id="ac1" prefHeight="720.0" prefWidth="1600.0" />
                   <MFXProgressBar fx:id="timerBar" minWidth="500.0" prefHeight="50.0" prefWidth="720.0" progress="0.0" style="-fx-rotate: 90;">
@@ -46,12 +46,12 @@
             </StackPane>
             <HBox prefHeight="50.0">
                <children>
-                  <Label prefHeight="50.0" prefWidth="958.0" style="-fx-border-color: black;" text="Label" HBox.hgrow="ALWAYS">
+                  <Label fx:id="currentName" alignment="CENTER" prefHeight="50.0" prefWidth="958.0" styleClass="label-card" stylesheets="@Pane/css/label-card.css" text="Label" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="26.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="50.0" prefWidth="647.0" style="-fx-border-color: black;" text="Label" HBox.hgrow="ALWAYS">
+                  <Label fx:id="currentPoint" alignment="CENTER" prefHeight="50.0" prefWidth="647.0" styleClass="label-card" stylesheets="@Pane/css/label-card.css" text="Label" HBox.hgrow="ALWAYS">
                      <font>
                         <Font size="26.0" />
                      </font>
