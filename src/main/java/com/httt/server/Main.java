@@ -14,6 +14,11 @@ import java.io.IOException;
 
 public class Main extends Application {
     @FXML
+    private MFXButton lamDe;
+
+    @FXML
+    private MFXButton server;
+    @FXML
     void lamDeClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/com/httt/server/ExamMaker/examMaker.fxml"));

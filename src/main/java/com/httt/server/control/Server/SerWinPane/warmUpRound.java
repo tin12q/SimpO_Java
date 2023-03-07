@@ -14,7 +14,8 @@ public class warmUpRound extends updateInformation {
     @FXML private Label scoreOfS1, scoreOfS2, scoreOfS3, scoreOfS4;
     Participants participants = new Participants();
     @FXML private void setUp(ActionEvent event) throws IOException {
-        super.setInformation(nameOfS1, nameOfS2, nameOfS3, nameOfS4, scoreOfS1, scoreOfS2, scoreOfS3, scoreOfS4);
+        super.setName(nameOfS1, nameOfS2, nameOfS3, nameOfS4);
+        super.setScores(scoreOfS1, scoreOfS2, scoreOfS3, scoreOfS4);
     }
 
     int turnID = 0;
