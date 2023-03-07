@@ -44,7 +44,7 @@ public class SerWin {
     
     @FXML
     private void initialize() {
-        stuffbtn.setOnAction(event -> loadPage("home", event));
+        stuffbtn.setOnAction(event -> loadPage("Home", event));
         obstabtn.setOnAction(event -> loadPage("obstacleRound", event));
         startbtn.setOnAction(event -> loadPage("warmUpRound", event));
         accelbtn.setOnAction(event -> loadPage("speedUpRound", event));
@@ -72,8 +72,8 @@ public class SerWin {
                 AnchorPane.setLeftAnchor(newPane, 0.0);
                 AnchorPane.setRightAnchor(newPane, 0.0);
                 AnchorPane.setTopAnchor(newPane, 0.0);
-                System.out.println("Loaded " + name + " page");
-                System.out.println(stage.getTitle());
+//                System.out.println("Loaded " + name + " page");
+//                System.out.println(stage.getTitle());
             }
         } catch (IOException e) {
             e.printStackTrace();

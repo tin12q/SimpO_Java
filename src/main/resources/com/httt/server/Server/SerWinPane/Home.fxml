@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="900" prefWidth="1400" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.server.control.Server.SerWinPane.home">
+<AnchorPane prefHeight="900" prefWidth="1400" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.server.control.Server.SerWinPane.Home">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="69.0" layoutY="64.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -204,12 +204,12 @@
                                     <Insets top="15.0" />
                                  </padding>
                               </Label>
-                              <MFXTextField floatMode="BORDER" maxWidth="1.7976931348623157E308" promptText="Tên S1" HBox.hgrow="ALWAYS">
+                              <MFXTextField fx:id="nameOfS1" floatMode="BORDER" maxWidth="1.7976931348623157E308" promptText="Tên S1" HBox.hgrow="ALWAYS">
                                  <font>
                                     <Font size="22.0" />
                                  </font>
                               </MFXTextField>
-                              <MFXTextField floatMode="BORDER" layoutX="65.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefWidth="200.0" promptText="Điểm" text="0">
+                              <MFXTextField fx:id="scoreOfS1" floatMode="BORDER" layoutX="65.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefWidth="200.0" promptText="Điểm" text="0">
                                  <font>
                                     <Font size="22.0" />
                                  </font>
@@ -226,12 +226,12 @@
                                     <Insets top="15.0" />
                                  </padding>
                               </Label>
-                              <MFXTextField floatMode="BORDER" maxWidth="1.7976931348623157E308" promptText="Tên S2" HBox.hgrow="ALWAYS">
+                              <MFXTextField fx:id="nameOfS2" floatMode="BORDER" maxWidth="1.7976931348623157E308" promptText="Tên S2" HBox.hgrow="ALWAYS">
                                  <font>
                                     <Font size="22.0" />
                                  </font>
                               </MFXTextField>
-                              <MFXTextField floatMode="BORDER" layoutX="65.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefWidth="200.0" promptText="Điểm" text="0">
+                              <MFXTextField fx:id="scoreOfS2" floatMode="BORDER" layoutX="65.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefWidth="200.0" promptText="Điểm" text="0">
                                  <font>
                                     <Font size="22.0" />
                                  </font>
@@ -248,12 +248,12 @@
                                     <Insets top="15.0" />
                                  </padding>
                               </Label>
-                              <MFXTextField floatMode="BORDER" maxWidth="1.7976931348623157E308" promptText="Tên S3" HBox.hgrow="ALWAYS">
+                              <MFXTextField fx:id="nameOfS3" floatMode="BORDER" maxWidth="1.7976931348623157E308" promptText="Tên S3" HBox.hgrow="ALWAYS">
                                  <font>
                                     <Font size="22.0" />
                                  </font>
                               </MFXTextField>
-                              <MFXTextField floatMode="BORDER" layoutX="65.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefWidth="200.0" promptText="Điểm" text="0">
+                              <MFXTextField fx:id="scoreOfS3" floatMode="BORDER" layoutX="65.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefWidth="200.0" promptText="Điểm" text="0">
                                  <font>
                                     <Font size="22.0" />
                                  </font>
@@ -270,12 +270,12 @@
                                     <Insets top="15.0" />
                                  </padding>
                               </Label>
-                              <MFXTextField floatMode="BORDER" maxWidth="1.7976931348623157E308" promptText="Tên S4" HBox.hgrow="ALWAYS">
+                              <MFXTextField fx:id="nameOfS4" floatMode="BORDER" maxWidth="1.7976931348623157E308" promptText="Tên S4" HBox.hgrow="ALWAYS">
                                  <font>
                                     <Font size="22.0" />
                                  </font>
                               </MFXTextField>
-                              <MFXTextField floatMode="BORDER" layoutX="65.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefWidth="200.0" promptText="Điểm" text="0">
+                              <MFXTextField fx:id="scoreOfS4" floatMode="BORDER" layoutX="65.0" layoutY="10.0" maxWidth="1.7976931348623157E308" prefWidth="200.0" promptText="Điểm" text="0">
                                  <font>
                                     <Font size="22.0" />
                                  </font>
@@ -290,7 +290,7 @@
                </VBox.margin></HBox>
             <HBox alignment="BOTTOM_RIGHT" layoutX="10.0" layoutY="502.0" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <MFXButton buttonType="RAISED" depthLevel="LEVEL3" prefHeight="100.0" prefWidth="160.0" text="Thay đổi">
+                  <MFXButton buttonType="RAISED" depthLevel="LEVEL3" onAction="#changeDetails" prefHeight="100.0" prefWidth="160.0" text="Thay đổi">
                      <font>
                         <Font size="22.0" />
                      </font>
