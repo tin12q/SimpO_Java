@@ -12,11 +12,6 @@
 
 <AnchorPane prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.server.control.Server.SerWinPane.obstacleRound">
    <children>
-      <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="60.0" prefWidth="220.0" style="-fx-background-color: #00ff00;" text="VCNV" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <font>
-            <Font name="System Bold" size="30.0" />
-         </font>
-      </MFXButton>
       <VBox layoutX="10.0" layoutY="8.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="240.0" prefWidth="600.0">
@@ -200,7 +195,7 @@
                               <AnchorPane prefHeight="18.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                                  <children>
                                     <Label prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
-                                    <MFXRadioButton AnchorPane.rightAnchor="0.0" />
+                                    <MFXRadioButton fx:id="checkS1" AnchorPane.rightAnchor="0.0" />
                                  </children>
                               </AnchorPane>
                            </children>
@@ -210,7 +205,7 @@
                               <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                                  <children>
                                     <Label prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
-                                    <MFXRadioButton AnchorPane.rightAnchor="0.0" />
+                                    <MFXRadioButton fx:id="checkS2" AnchorPane.rightAnchor="0.0" />
                                  </children>
                               </AnchorPane>
                            </children>
@@ -220,7 +215,7 @@
                               <AnchorPane prefHeight="18.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                                  <children>
                                     <Label prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
-                                    <MFXRadioButton AnchorPane.rightAnchor="0.0" />
+                                    <MFXRadioButton fx:id="checkS3" AnchorPane.rightAnchor="0.0" />
                                  </children>
                               </AnchorPane>
                            </children>
@@ -230,7 +225,7 @@
                               <AnchorPane prefHeight="18.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                                  <children>
                                     <Label prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
-                                    <MFXRadioButton AnchorPane.rightAnchor="0.0" />
+                                    <MFXRadioButton fx:id="checkS4" AnchorPane.rightAnchor="0.0" />
                                  </children>
                               </AnchorPane>
                            </children>
@@ -238,7 +233,7 @@
                         <HBox alignment="CENTER" maxWidth="900.0" spacing="15.0" VBox.vgrow="ALWAYS">
                            <children>
                               <MFXButton buttonType="RAISED" depthLevel="LEVEL1" maxWidth="400.0" rippleAnimationSpeed="0.0" text="HIện đáp án" HBox.hgrow="ALWAYS" />
-                              <MFXButton buttonType="RAISED" depthLevel="LEVEL1" layoutX="395.0" layoutY="10.0" maxWidth="400.0" rippleAnimationSpeed="0.0" text="Xác nhận" HBox.hgrow="ALWAYS" />
+                              <MFXButton fx:id="confirmCorrectAnswer" buttonType="RAISED" depthLevel="LEVEL1" layoutX="395.0" layoutY="10.0" maxWidth="400.0" onAction="#processAnswers" rippleAnimationSpeed="0.0" text="Xác nhận" HBox.hgrow="ALWAYS" />
                            </children>
                         </HBox>
                      </children>
@@ -260,12 +255,12 @@
          <children>
             <VBox alignment="BOTTOM_CENTER" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <children>
-                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S1" VBox.vgrow="ALWAYS">
+                  <Label fx:id="nameOfS1" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S1" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                  <Label fx:id="scoreOfS1" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
@@ -280,12 +275,12 @@
             </VBox>
             <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <children>
-                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S2" VBox.vgrow="ALWAYS">
+                  <Label fx:id="nameOfS2" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S2" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                  <Label fx:id="scoreOfS2" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
@@ -297,7 +292,7 @@
             </VBox>
             <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <children>
-                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S3" VBox.vgrow="ALWAYS">
+                  <Label fx:id="nameOfS3" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S3" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
@@ -305,7 +300,7 @@
                         <Insets />
                      </VBox.margin>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                  <Label fx:id="scoreOfS3" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
@@ -317,12 +312,12 @@
             </VBox>
             <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <children>
-                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S4" VBox.vgrow="ALWAYS">
+                  <Label fx:id="nameOfS4" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S4" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                  <Label fx:id="scoreOfS4" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
@@ -331,5 +326,10 @@
             </VBox>
          </children>
       </HBox>
+      <MFXButton buttonType="RAISED" depthLevel="LEVEL5" onAction="#initialize" prefHeight="60.0" prefWidth="220.0" style="-fx-background-color: #00ff00;" text="VCNV" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </MFXButton>
    </children>
 </AnchorPane>

@@ -1,5 +1,35 @@
 package com.httt.server.control.Server.SerWinPane;
 
-public class obstacleRound {
+import io.github.palexdev.materialfx.controls.MFXRadioButton;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 
+import java.io.IOException;
+//NOTE: just do this to understand workflow, so sleepy rn
+public class obstacleRound extends updateInformation {
+    @FXML
+    private Label nameOfS1, nameOfS2, nameOfS3, nameOfS4;
+    @FXML
+    private Label scoreOfS1, scoreOfS2, scoreOfS3, scoreOfS4;
+    @FXML
+    private MFXRadioButton checkS1, checkS2, checkS3, checkS4;
+
+    @FXML private void initialize() {
+        super.setName(nameOfS1, nameOfS2, nameOfS3, nameOfS4);
+        super.setScores(scoreOfS1, scoreOfS2, scoreOfS3, scoreOfS4);
+    }
+
+    private void processAnswerOfContestant(int id, MFXRadioButton check) {
+        if (check.isSelected())
+            participants.changePoint(id, 10);
+    }
+    @FXML private void processAnswers() {
+        processAnswerOfContestant(0, checkS1);
+        processAnswerOfContestant(1, checkS2);
+        processAnswerOfContestant(2, checkS3);
+        processAnswerOfContestant(3, checkS4);
+        for (int i = 0; i < 4; i++)
+            updateScore(i, scoreOfS1, scoreOfS2, scoreOfS3, scoreOfS4);
+    }
 }
