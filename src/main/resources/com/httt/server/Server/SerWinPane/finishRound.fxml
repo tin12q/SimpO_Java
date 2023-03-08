@@ -241,12 +241,12 @@
          <children>
             <VBox alignment="BOTTOM_CENTER" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <children>
-                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S1" VBox.vgrow="ALWAYS">
+                  <Label fx:id="nameOfS1" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S1" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                  <Label fx:id="scoreOfS1" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
@@ -261,12 +261,12 @@
             </VBox>
             <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <children>
-                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S2" VBox.vgrow="ALWAYS">
+                  <Label fx:id="nameOfS2" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S2" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                  <Label fx:id="scoreOfS2" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
@@ -278,7 +278,7 @@
             </VBox>
             <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <children>
-                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S3" VBox.vgrow="ALWAYS">
+                  <Label fx:id="nameOfS3" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S3" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
@@ -286,7 +286,7 @@
                         <Insets />
                      </VBox.margin>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                  <Label fx:id="scoreOfS3" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
@@ -298,12 +298,12 @@
             </VBox>
             <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <children>
-                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S4" VBox.vgrow="ALWAYS">
+                  <Label fx:id="nameOfS4" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S4" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                  <Label fx:id="scoreOfS4" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>

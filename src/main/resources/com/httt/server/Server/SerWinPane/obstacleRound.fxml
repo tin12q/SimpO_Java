@@ -194,7 +194,7 @@
                            <children>
                               <AnchorPane prefHeight="18.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
+                                    <Label fx:id="nameOfS11" prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
                                     <MFXRadioButton fx:id="checkS1" AnchorPane.rightAnchor="0.0" />
                                  </children>
                               </AnchorPane>
@@ -204,7 +204,7 @@
                            <children>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
+                                    <Label fx:id="nameOfS22" prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
                                     <MFXRadioButton fx:id="checkS2" AnchorPane.rightAnchor="0.0" />
                                  </children>
                               </AnchorPane>
@@ -214,7 +214,7 @@
                            <children>
                               <AnchorPane prefHeight="18.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
+                                    <Label fx:id="nameOfS33" prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
                                     <MFXRadioButton fx:id="checkS3" AnchorPane.rightAnchor="0.0" />
                                  </children>
                               </AnchorPane>
@@ -224,7 +224,7 @@
                            <children>
                               <AnchorPane prefHeight="18.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <Label prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
+                                    <Label fx:id="nameOfS44" prefHeight="17.0" prefWidth="794.0" text="Label" AnchorPane.leftAnchor="0.0" />
                                     <MFXRadioButton fx:id="checkS4" AnchorPane.rightAnchor="0.0" />
                                  </children>
                               </AnchorPane>
@@ -238,9 +238,9 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <MFXButton buttonType="RAISED" depthLevel="LEVEL4" prefHeight="200.0" prefWidth="200.0" text="Xác nhận" HBox.hgrow="ALWAYS">
+                  <MFXButton buttonType="RAISED" depthLevel="LEVEL4" prefHeight="200.0" prefWidth="200.0" text="Xác nhận CNV" textAlignment="CENTER" HBox.hgrow="ALWAYS">
                      <font>
-                        <Font size="30.0" />
+                        <Font size="25.0" />
                      </font>
                      <HBox.margin>
                         <Insets left="15.0" />
