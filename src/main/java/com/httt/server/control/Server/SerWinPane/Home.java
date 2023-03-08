@@ -1,6 +1,6 @@
 package com.httt.server.control.Server.SerWinPane;
 
-import io.github.palexdev.materialfx.controls.MFXButton;
+
 import io.github.palexdev.materialfx.controls.MFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,7 +8,7 @@ import javafx.fxml.FXML;
 import java.awt.*;
 import java.io.IOException;
 
-public class Home {
+public class Home extends updateInformation {
     @FXML private MFXTextField nameOfS1, nameOfS2, nameOfS3, nameOfS4;
     @FXML private MFXTextField scoreOfS1, scoreOfS2, scoreOfS3, scoreOfS4;
     Participants participants = new Participants();
@@ -25,4 +25,5 @@ public class Home {
         participants.setScores(0, scores[0]); participants.setScores(1, scores[1]);
         participants.setScores(2, scores[2]); participants.setScores(3, scores[3]);
     }
+
 }

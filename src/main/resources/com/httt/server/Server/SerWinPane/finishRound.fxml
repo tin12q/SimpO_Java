@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import io.github.palexdev.materialfx.controls.MFXButton?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Region?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.server.control.Server.SerWinPane.finishRound">
+<AnchorPane prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.server.control.Server.SerWinPane.finishRound">
    <children>
       <MFXButton buttonType="RAISED" depthLevel="LEVEL5" prefHeight="60.0" prefWidth="220.0" style="-fx-background-color: #ff0000;" text="Về đích" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
@@ -241,12 +238,12 @@
          <children>
             <VBox alignment="BOTTOM_CENTER" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <children>
-                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S1" VBox.vgrow="ALWAYS">
+                  <Label fx:id="nameOfS1" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S1" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                  <Label fx:id="scoreOfS1" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
@@ -261,12 +258,12 @@
             </VBox>
             <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <children>
-                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S2" VBox.vgrow="ALWAYS">
+                  <Label fx:id="nameOfS2" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S2" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                  <Label fx:id="scoreOfS2" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
@@ -278,7 +275,7 @@
             </VBox>
             <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <children>
-                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S3" VBox.vgrow="ALWAYS">
+                  <Label fx:id="nameOfS3" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S3" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
@@ -286,7 +283,7 @@
                         <Insets />
                      </VBox.margin>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                  <Label fx:id="scoreOfS3" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
@@ -298,12 +295,12 @@
             </VBox>
             <VBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                <children>
-                  <Label alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S4" VBox.vgrow="ALWAYS">
+                  <Label fx:id="nameOfS4" alignment="CENTER" prefHeight="62.0" prefWidth="304.0" text="S4" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
+                  <Label fx:id="scoreOfS4" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="225.0" prefWidth="350.0" style="-fx-border-color: #000000;" text="0" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="42.0" />
                      </font>
