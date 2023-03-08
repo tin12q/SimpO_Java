@@ -20,7 +20,7 @@ public class participants {
         names[index] = name;
     }
 
-    public void changePoint(int index, int points) {
+    public static void changePoint(int index, int points) {
         scores[index] += points;
         if(scores[index] < 0) scores[index] = 0;
     }
