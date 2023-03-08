@@ -4,6 +4,7 @@ package com.httt.client.control.clientWin;
 import io.github.palexdev.materialfx.controls.MFXProgressBar;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,12 +12,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.web.WebHistory;
 import javafx.util.Duration;
 
 import java.io.IOException;
 import com.httt.client.model.participants;
 
-import javax.swing.plaf.basic.BasicBorders;
 
 public class PlayerWin {
     @FXML
@@ -55,8 +56,6 @@ public class PlayerWin {
         participants.setScores(2, 0);
         participants.setScores(3, 0);
         loadPage("warmUp", new ActionEvent());
-        //TimerThread t1 = new TimerThread(10000);
-        //t1.run();
         //set name and score
         s1Lb.setText(participants.getName(0)+"     "+participants.getScore(0));
         s2Lb.setText(participants.getName(1)+"     "+participants.getScore(1));
@@ -64,26 +63,51 @@ public class PlayerWin {
         s4Lb.setText(participants.getName(3)+"     "+participants.getScore(3));
         currentName.setText(participants.getName(0));
         currentPoint.setText(String.valueOf(participants.getScore(0)));
-
+        checkPoint t2 = new checkPoint();
+        t2.start();
+        //set size
         timerBar.prefWidthProperty().bind(st1.heightProperty());
 
-        TimerThread t1 = new TimerThread(20);
-        t1.start();
+        //key bind
         answerTf.setOnKeyPressed(event -> {
             switch (event.getCode()) {
-                case ENTER:
+                case ENTER -> {
                     answerTf.setPromptText("Enter pressed");
                     answerTf.setText("");
-
-                    break;
-                case ESCAPE:
-                    System.out.println("Escape pressed");
-                    break;
-                default:
-                    break;
+                    participants.changePoint(0, 1);
+                    //System.out.println(participants.getScore(0));
+                }
+                case ESCAPE -> System.out.println("Escape pressed");
+                default -> {
+                }
             }
         });
 
+        TimerThread t1 = new TimerThread(20);
+        t1.start();
+
+
+
+    }
+    class checkPoint extends Thread{
+        @Override
+        public void run(){
+            try{
+                while (true){
+
+                    if(participants.getScore(0)!=Integer.parseInt(currentPoint.getText())){
+                        Platform.runLater(() -> currentPoint.setText(String.valueOf(participants.getScore(0))));
+                        Platform.runLater(() -> s1Lb.setText(participants.getName(0)+"     "+participants.getScore(0)));
+                        //System.out.println("change");
+                    }
+
+
+                    Thread.sleep(300);
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
     class TimerThread extends Thread{
         int duration;
@@ -102,7 +126,7 @@ public class PlayerWin {
             timeline = new Timeline(new KeyFrame(Duration.millis(10), event -> {
                 timerSeconds+=10;
                 currentSeconds = (double) timerSeconds / 1000;
-                System.out.println(currentSeconds);
+                //System.out.println(currentSeconds);
                 timerBar.setProgress((double) timerSeconds / duration);
                 if(timerSeconds==duration){
                     timeline.stop();
