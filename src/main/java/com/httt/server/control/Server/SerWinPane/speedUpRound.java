@@ -9,7 +9,8 @@ import io.github.palexdev.materialfx.controls.base.MFXLabeled;
 import javafx.scene.control.Label;
 import java.io.IOException;
 
-public class speedUpRound extends updateInformation {
+
+public class speedUpRound extends updateInformation{
     @FXML private Label nameOfS1, nameOfS2, nameOfS3, nameOfS4;
     @FXML private Label scoreOfS1, scoreOfS2, scoreOfS3, scoreOfS4;
     @FXML private void initialize() {
