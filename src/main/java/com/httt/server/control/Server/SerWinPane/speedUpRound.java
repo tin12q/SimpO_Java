@@ -28,7 +28,6 @@ public class speedUpRound extends updateInformation implements CustomTimer.Custo
         super.setScores(scoreOfS1, scoreOfS2, scoreOfS3, scoreOfS4);
         //timer
          timer = new CustomTimer(TIMER_DURATION_SECONDS, 10,this);
-
     }
 
     @Override
@@ -36,6 +35,7 @@ public class speedUpRound extends updateInformation implements CustomTimer.Custo
         Platform.runLater(()->{
             timeLb.setText(String.format("%.2f", (double) milis / 1000));
         });
+        System.out.println(milis);
     }
     public void onCountdownComplete() {
         Platform.runLater(()->{
@@ -46,6 +46,10 @@ public class speedUpRound extends updateInformation implements CustomTimer.Custo
     @FXML private void turn1(ActionEvent event) {
         timer.reset(10);
     }
+
+
+
+
     /*class TimerThread extends Thread{
         int duration;
         double currentSeconds;
