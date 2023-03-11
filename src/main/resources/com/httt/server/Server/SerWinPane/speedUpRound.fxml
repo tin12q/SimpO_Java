@@ -20,7 +20,7 @@
                   <VBox prefWidth="250.0" spacing="15.0">
                      <children>
                         <Region prefHeight="38.0" prefWidth="250.0" />
-                        <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="84.0" prefWidth="250.0" text="Scene đáp án">
+                        <MFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" minWidth="250.0" prefHeight="84.0" prefWidth="250.0" text="Scene đáp án" VBox.vgrow="NEVER">
                            <font>
                               <Font size="19.0" />
                            </font>
@@ -57,7 +57,7 @@
                <children>
                   <HBox spacing="25.0">
                      <children>
-                        <MFXButton buttonType="RAISED" text="Tăng tốc 1">
+                        <MFXButton buttonType="RAISED" onAction="#turn1" text="Tăng tốc 1">
                            <font>
                               <Font size="19.0" />
                            </font>
@@ -97,7 +97,7 @@
                               <Font size="19.0" />
                            </font>
                         </Label>
-                        <Label layoutX="177.0" layoutY="10.0" prefHeight="40.0" prefWidth="135.0" text="0">
+                        <Label fx:id="timeLb" layoutX="177.0" layoutY="10.0" prefHeight="40.0" prefWidth="135.0" text="0">
                            <font>
                               <Font size="19.0" />
                            </font>

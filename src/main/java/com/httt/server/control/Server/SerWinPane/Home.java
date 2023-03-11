@@ -25,8 +25,8 @@ public class Home extends updateInformation {
         participants.setScores(0, scores[0]); participants.setScores(1, scores[1]);
         participants.setScores(2, scores[2]); participants.setScores(3, scores[3]);
     }
-    @FXML private void initialize() {
+    /*@FXML private void initialize() {
         super.setName(nameOfS1, nameOfS2, nameOfS3, nameOfS4);
         super.setScores(scoreOfS1, scoreOfS2, scoreOfS3, scoreOfS4);
-    }
+    }*/
 }
