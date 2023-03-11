@@ -4,62 +4,40 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class CustomTimer {
-
     private Timer timer;
-    private long millisRemaining;
-    private long totalDuration;
-    private TimerTask task;
-    private double progress;
-    private boolean isRunning;
+    private int countdown;
+    private CustomTimerListener listener;
+    private int period ;
 
-    public CustomTimer(long millis) {
-        this.totalDuration = millis;
-        this.millisRemaining = millis;
-        this.timer = new Timer();
-        this.progress = 0.0;
+    public CustomTimer(int countdown, CustomTimerListener listener, int period) {
+        this.countdown = countdown*1000;
+        this.listener = listener;
+        this.period = period;
     }
 
     public void start() {
-        isRunning = true;
-        task = new TimerTask() {
+        timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                millisRemaining -= 10; // decrement by 10ms for better precision
-                progress = (double) (totalDuration - millisRemaining) / totalDuration;
-                if (millisRemaining <= 0) {
-                    stop();
+                countdown-=period;
 
+                if (countdown <= 0) {
+                    stop();
+                    listener.onCountdownComplete();
+                } else {
+                    listener.onCountdownUpdate(countdown);
                 }
             }
-        };
-        timer.scheduleAtFixedRate(task, 0, 10); // run task every 10ms
+        }, 0, period);
     }
 
     public void stop() {
-        task.cancel();
-        task = null;
-        isRunning = false;
+        timer.cancel();
     }
 
-    public long getMillisRemaining() {
-        return millisRemaining;
-    }
-
-    public void setMillisRemaining(long millis) {
-        this.millisRemaining = millis;
-        this.totalDuration = millis;
-        this.progress = 0.0;
-    }
-
-    public double getProgress() {
-        return progress;
-    }
-
-    public boolean isRunning() {
-        return isRunning;
-    }
-
-    public void setRunning(boolean running) {
-        isRunning = running;
+    public interface CustomTimerListener{
+        void onCountdownUpdate(int secondsLeft);
+        void onCountdownComplete();
     }
 }

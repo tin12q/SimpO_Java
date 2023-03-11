@@ -1,6 +1,7 @@
 package com.httt.client.control.clientWin;
 
 
+import com.httt.client.model.CustomTimer;
 import io.github.palexdev.materialfx.controls.MFXProgressBar;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -19,7 +20,7 @@ import java.io.IOException;
 import com.httt.client.model.participants;
 
 
-public class PlayerWin {
+public class PlayerWin implements CustomTimer.CustomTimerListener {
     @FXML
     private AnchorPane ac1;
     @FXML
@@ -43,6 +44,7 @@ public class PlayerWin {
 
     private static final int TIMER_DURATION_SECONDS = 10;
     private Timeline timeline;
+    private CustomTimer timer;
 
     private int timerSeconds = 0;
     @FXML
@@ -83,11 +85,21 @@ public class PlayerWin {
             }
         });
 
-        TimerThread t1 = new TimerThread(20);
-        t1.start();
+        //TimerThread t1 = new TimerThread(20);
+        //t1.start();
+        timer = new CustomTimer(TIMER_DURATION_SECONDS, this,30);
+        timer.start();
 
+    }
+    @Override
+    public void onCountdownUpdate(int milis) {
+        System.out.println("milis: " + milis);
+        Platform.runLater(()->timerBar.setProgress((double) milis / (TIMER_DURATION_SECONDS*1000)));
+    }
 
-
+    @Override
+    public void onCountdownComplete() {
+        Platform.runLater(()->timerBar.setProgress(0));
     }
     class checkPoint extends Thread{
         @Override
@@ -109,7 +121,7 @@ public class PlayerWin {
             }
         }
     }
-    class TimerThread extends Thread{
+    /*class TimerThread extends Thread{
         int duration;
         double currentSeconds;
 
@@ -136,7 +148,7 @@ public class PlayerWin {
             timeline.setCycleCount(Timeline.INDEFINITE);
             timeline.play();
         }
-    }
+    }*/
     private void loadPage(String name, ActionEvent event) {
         try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/httt/client/clientWin/Pane/" + name + ".fxml"));
