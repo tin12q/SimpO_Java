@@ -17,7 +17,10 @@ import javafx.scene.web.WebHistory;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.util.concurrent.CompletableFuture;
+
 import com.httt.client.model.participants;
+import com.ea.async.Async;
 
 
 public class PlayerWin implements CustomTimer.CustomTimerListener {
@@ -44,20 +47,19 @@ public class PlayerWin implements CustomTimer.CustomTimerListener {
 
     private static final int TIMER_DURATION_SECONDS = 10;
     private Timeline timeline;
-    private CustomTimer timer;
+    public static CustomTimer timer;
 
     private int timerSeconds = 0;
     @FXML
     protected void initialize() throws IOException {
-        participants.setName(0, "Nguyen Van A");
-        participants.setName(1, "Nguyen Van B");
-        participants.setName(2, "Nguyen Van C");
-        participants.setName(3, "Nguyen Van D");
-        participants.setScores(0, 0);
-        participants.setScores(1, 0);
-        participants.setScores(2, 0);
-        participants.setScores(3, 0);
-        loadPage("warmUp", new ActionEvent());
+        //Async.init();
+        participants.setScores(0, 0);participants.setName(0, "Nguyen Van A");
+        participants.setScores(1, 0);participants.setName(1, "Nguyen Van B");
+        participants.setScores(2, 0);participants.setName(2, "Nguyen Van C");
+        participants.setScores(3, 0);participants.setName(3, "Nguyen Van D");
+
+
+
         //set name and score
         s1Lb.setText(participants.getName(0)+"     "+participants.getScore(0));
         s2Lb.setText(participants.getName(1)+"     "+participants.getScore(1));
@@ -67,6 +69,7 @@ public class PlayerWin implements CustomTimer.CustomTimerListener {
         currentPoint.setText(String.valueOf(participants.getScore(0)));
         checkPoint t2 = new checkPoint();
         t2.start();
+
         //set size
         timerBar.prefWidthProperty().bind(st1.heightProperty());
 
@@ -86,14 +89,18 @@ public class PlayerWin implements CustomTimer.CustomTimerListener {
         });
 
         //TimerThread t1 = new TimerThread(20);
+
+
         //t1.start();
-        timer = new CustomTimer(TIMER_DURATION_SECONDS, this,30);
-        timer.start();
+        timer = new CustomTimer(TIMER_DURATION_SECONDS, 30,this);
+        loadPane("speedUp",new ActionEvent());
+
+        //timer.start();
 
     }
     @Override
     public void onCountdownUpdate(int milis) {
-        System.out.println("milis: " + milis);
+        //System.out.println("milis: " + milis);
         Platform.runLater(()->timerBar.setProgress((double) milis / (TIMER_DURATION_SECONDS*1000)));
     }
 
@@ -106,14 +113,11 @@ public class PlayerWin implements CustomTimer.CustomTimerListener {
         public void run(){
             try{
                 while (true){
-
                     if(participants.getScore(0)!=Integer.parseInt(currentPoint.getText())){
                         Platform.runLater(() -> currentPoint.setText(String.valueOf(participants.getScore(0))));
                         Platform.runLater(() -> s1Lb.setText(participants.getName(0)+"     "+participants.getScore(0)));
                         //System.out.println("change");
                     }
-
-
                     Thread.sleep(300);
                 }
             } catch (InterruptedException e) {
@@ -149,7 +153,7 @@ public class PlayerWin implements CustomTimer.CustomTimerListener {
             timeline.play();
         }
     }*/
-    private void loadPage(String name, ActionEvent event) {
+    private void loadPane(String name, ActionEvent event) {
         try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/httt/client/clientWin/Pane/" + name + ".fxml"));
 

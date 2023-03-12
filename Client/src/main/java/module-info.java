@@ -1,13 +1,16 @@
 module com.httt.client {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.media;
     requires javafx.web;
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires net.synedra.validatorfx;
     requires org.kordamp.bootstrapfx.core;
+
     requires MaterialFX;
+    requires ea.async;
 
 
     opens com.httt.client to javafx.fxml;

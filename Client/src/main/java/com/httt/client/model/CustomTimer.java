@@ -5,39 +5,64 @@ import java.util.TimerTask;
 
 public class CustomTimer {
     private Timer timer;
-    private int countdown;
+    private int countdownTime;
     private CustomTimerListener listener;
-    private int period ;
+    private int interval;
+    private boolean isRunning;
+    private CountDownTask task;
 
-    public CustomTimer(int countdown, CustomTimerListener listener, int period) {
-        this.countdown = countdown*1000;
+
+    public CustomTimer(int countdownTime, int interval, CustomTimerListener listener) {
+        this.countdownTime = countdownTime;
+        this.interval = interval;
         this.listener = listener;
-        this.period = period;
     }
+    private class CountDownTask implements Runnable {
+        private boolean isStopped;
 
-    public void start() {
-        timer = new Timer();
-        timer.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
-                countdown-=period;
-
-                if (countdown <= 0) {
-                    stop();
-                    listener.onCountdownComplete();
-                } else {
-                    listener.onCountdownUpdate(countdown);
+        public void stop() {
+            isStopped = true;
+        }
+        @Override
+        public void run() {
+            int remainingTime = countdownTime*1000;
+            while (remainingTime >= 0 && !isStopped) {
+                listener.onCountdownUpdate(remainingTime);
+                try {
+                    Thread.sleep(interval);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
+                remainingTime -= interval;
             }
-        }, 0, period);
+            if (!isStopped) {
+                listener.onCountdownComplete();
+            }
+            isRunning = false;
+        }
+    }
+    public void start() {
+        if (!isRunning) {
+            task = new CountDownTask();
+            new Thread(task).start();
+            isRunning = true;
+        }
     }
 
     public void stop() {
-        timer.cancel();
+        if (isRunning) {
+            task.stop();
+            isRunning = false;
+        }
     }
 
+    public void reset(int countdownTime) {
+        stop();
+        this.countdownTime = countdownTime;
+        start();
+    }
     public interface CustomTimerListener{
-        void onCountdownUpdate(int secondsLeft);
+        void onCountdownUpdate(int remainingTime);
         void onCountdownComplete();
     }
 }
