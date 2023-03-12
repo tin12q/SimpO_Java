@@ -30,14 +30,16 @@ public class CustomTimer {
         @Override
         public void run() {
             int remainingTime = countdownTime*1000;
+            int estimatedTime = 0;
             while (remainingTime >= 0 && !isStopped) {
-                listener.onCountdownUpdate(remainingTime);
+                listener.onCountdownUpdate(remainingTime,estimatedTime);
                 try {
                     Thread.sleep(interval);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 remainingTime -= interval;
+                estimatedTime += interval;
             }
             if (!isStopped) {
                 listener.onCountdownComplete();
@@ -66,7 +68,7 @@ public class CustomTimer {
         start();
     }
     public interface CustomTimerListener{
-        void onCountdownUpdate(int remainingTime);
+        void onCountdownUpdate(int remainingTime,int estimatedTime);
         void onCountdownComplete();
     }
 }

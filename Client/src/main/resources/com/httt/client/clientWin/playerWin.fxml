@@ -90,7 +90,7 @@
             </StackPane>
          </children>
       </VBox>
-      <ScrollPane fx:id="ansSPane" hbarPolicy="NEVER" layoutY="40.0" vbarPolicy="NEVER" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="60.0">
+      <ScrollPane fx:id="ansSPane" hbarPolicy="NEVER" layoutY="40.0" prefHeight="590.0" prefWidth="200.0" vbarPolicy="NEVER" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="70.0">
          <content>
             <VBox fx:id="ansList" prefHeight="200.0" prefWidth="200.0" />
          </content>

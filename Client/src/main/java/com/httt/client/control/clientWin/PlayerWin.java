@@ -42,10 +42,10 @@ public class PlayerWin implements CustomTimer.CustomTimerListener {
 
     @FXML private VBox ansList;
     private static final int TIMER_DURATION_SECONDS = 10;
-    private Timeline timeline;
+
     public static CustomTimer timer;
 
-    private int timerSeconds = 0;
+    private double estimatedTime = 0;
     @FXML
     protected void initialize() throws IOException {
 
@@ -75,7 +75,7 @@ public class PlayerWin implements CustomTimer.CustomTimerListener {
             switch (event.getCode()) {
                 case ENTER -> {
                     answerTf.setPromptText("Enter pressed");
-                    ansList.getChildren().add(answerLb(answerTf.getText()));
+                    ansList.getChildren().add(answerLb(answerTf.getText()+" "+String.format("%.2f", (double) estimatedTime)));
                     answerTf.setText("");
                     participants.changePoint(0, 1);
                     //System.out.println(participants.getScore(0));
@@ -99,14 +99,16 @@ public class PlayerWin implements CustomTimer.CustomTimerListener {
 
     }
     @Override
-    public void onCountdownUpdate(int milis) {
+    public void onCountdownUpdate(int remainingMilis,int estimatedMilis) {
         //System.out.println("milis: " + milis);
-        Platform.runLater(()->timerBar.setProgress((double) milis / (TIMER_DURATION_SECONDS*1000)));
+        Platform.runLater(()->timerBar.setProgress((double) remainingMilis / (TIMER_DURATION_SECONDS*1000)));
+        estimatedTime = (float)estimatedMilis/1000;
     }
 
     @Override
     public void onCountdownComplete() {
         Platform.runLater(()->timerBar.setProgress(0));
+        estimatedTime = 0;
     }
     class checkPoint extends Thread{
         @Override

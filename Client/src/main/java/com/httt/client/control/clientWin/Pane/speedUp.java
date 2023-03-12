@@ -35,7 +35,7 @@ public class speedUp {
             PlayerWin.timer.reset(10);
             PlayerWin.timer.start();
         });
-        imgV.setImage(img);
+        //imgV.setImage(img);
         //mediaV.setVisible(false);
 
     }
