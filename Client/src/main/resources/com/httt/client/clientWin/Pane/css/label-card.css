@@ -1,24 +1,72 @@
 .label-card {
-    -fx-background-color: #ffffff;
-
-
-
-    -fx-font-size: 24px;
+    -fx-background-color: #847577;
+    -fx-font-size: 21px;
     -fx-font-weight: bold;
-    -fx-text-fill: #333333;
+    -fx-text-fill: #FBFBF2;
+    -fx-border-color: #FBFBF2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease-in-out;
 
-    -fx-border-color: #CCCCCC;
+}
+
+.label-card:hover {
+    -fx-background-color: #847577;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 15, 0, 0, 0);
+    -fx-border-color: #2b2b2b;
+    -fx-text-fill: #FBFBF2;
+}
+.label-card:pressed {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #FBFBF2;
+}
+.ques-card {
+    -fx-background-color: #A6A2A2;
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FBFBF2;
+    -fx-border-color: #FBFBF2;
 
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
     -fx-cursor: hand;
     -fx-transition: all 0.2s ease-in-out;
 }
 
-.label-card:hover {
-    -fx-background-color: #f7f7f7;
-
-
+.ques-card:hover {
+    -fx-background-color: #A6A2A2;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 15, 0, 0, 0);
     -fx-border-color: #aaaaaa;
 }
+.ques-card:pressed {
+    -fx-background-color: #aaaaaa;
+    -fx-text-fill: #FBFBF2;
+}
+.name-card {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: #847577;
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FBFBF2;
+    -fx-border-color: #FBFBF2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease-in-out;
 
+}
+
+.name-card:hover {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: #847577;
+
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 15, 0, 0, 0);
+    -fx-border-color: #2b2b2b;
+    -fx-text-fill: #FBFBF2;
+}
+.name-card:pressed {
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #FBFBF2;
+}

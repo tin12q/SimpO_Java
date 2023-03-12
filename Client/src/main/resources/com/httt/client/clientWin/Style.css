@@ -1,3 +1,37 @@
 .text-area *.text {
     -fx-text-alignment: center;
 }
+.text-field{
+    -fx-background-color: #E5E6E4;
+    -fx-text-fill: #847577;
+}
+.aP{
+    -fx-background-color: #FBFBF2;
+}
+.aP:hover{
+    -fx-background-color: #847577;
+}
+.aP:pressed{
+    -fx-background-color: #2b2b2b;
+}
+.bell{
+    -fx-background-color:red;
+    -fx-text-fill: #FBFBF2;
+}
+.scroll-pane{
+    -fx-background-color: #FBFBF2;
+    -fx-border-color: #FBFBF2;
+}
+.scroll-pane:hover{
+    -fx-background-color: #847577;
+    -fx-border-color: #FBFBF2;
+}
+.scroll-pane:pressed{
+    -fx-background-color: #2b2b2b;
+    -fx-border-color: #FBFBF2;
+}
+.answerLb{
+    -fx-background-color: #FBFBF2;
+    -fx-text-fill: #847577;
+    -fx-font-size: 21px;
+}

@@ -11,6 +11,10 @@ public class CustomTimer {
     private boolean isRunning;
     private CountDownTask task;
 
+    public int getRemainingTime(){
+        return countdownTime;
+    }
+
 
     public CustomTimer(int countdownTime, int interval, CustomTimerListener listener) {
         this.countdownTime = countdownTime;
