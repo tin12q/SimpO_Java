@@ -8,6 +8,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -34,9 +37,6 @@ public class MainClient {
         mcBtn.setOnAction(event -> loadPage("/mcWin/mcWin",event));
         mcBtn.setOnAction(event -> loadPage("/mcWin/mcWin",event));
         viewerBtn.setOnAction(event -> loadPage("/viewerWin/viewerWin",event));
-
-
-
     }
 
     private void loadPage(String page, ActionEvent event)  {
@@ -47,12 +47,16 @@ public class MainClient {
 
             Scene scene = new Scene(content);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            //setFullScreen;
 
             stage.setScene(scene);
-            stage.setX(0);
-            stage.setY(0);
-            stage.setTitle("Client");
             stage.show();
+
+            //fullScreen exit button on f12
+            stage.setFullScreenExitHint("");
+            KeyCombination customExitCombo = new KeyCodeCombination(KeyCode.F12, KeyCombination.SHIFT_ANY);
+            stage.setFullScreenExitKeyCombination(customExitCombo);
+            stage.setFullScreen(true);
         }
         catch (IOException e) {
             throw new RuntimeException(e);

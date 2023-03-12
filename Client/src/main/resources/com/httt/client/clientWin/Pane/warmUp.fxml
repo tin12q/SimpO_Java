@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="aP" prefHeight="720.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.client.control.clientWin.Pane.warmUp">
+<AnchorPane fx:id="aP" prefHeight="634.0" prefWidth="1366" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.client.control.clientWin.Pane.warmUp">
    <children>
       <HBox alignment="CENTER_LEFT" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fx:id="imgV" fitHeight="600.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgV" fitHeight="900" fitWidth="600" pickOnBounds="true" preserveRatio="true" />
             <Label fx:id="questionLb" alignment="CENTER" text="Label" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="30.0" />
