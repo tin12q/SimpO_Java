@@ -36,3 +36,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
+Client/src/main/resources/com/httt/client/clientWin/clientWin.fxml
