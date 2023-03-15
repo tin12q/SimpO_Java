@@ -8,9 +8,12 @@ import javafx.scene.layout.AnchorPane;
 
 
 public class warmUp {
-    @FXML private Label questionLb;
-    @FXML private ImageView imgV;
-    @FXML private AnchorPane aP;
+    @FXML
+    private Label questionLb;
+    @FXML
+    private ImageView imgV;
+    @FXML
+    private AnchorPane aP;
 
     @FXML
     protected void initialize() {

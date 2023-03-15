@@ -29,4 +29,5 @@ module com.httt.client {
     exports com.httt.client.control.clientWin.clientPane;
     opens com.httt.client.control.clientWin.Pane to javafx.fxml;
     exports com.httt.client.control.clientWin.Pane;
+
 }

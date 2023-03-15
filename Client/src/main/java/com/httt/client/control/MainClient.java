@@ -7,12 +7,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyCodeCombination;
 import javafx.scene.input.KeyCombination;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 
 public class MainClient {
@@ -28,21 +27,22 @@ public class MainClient {
 
     @FXML
     private MFXButton viewerBtn;
+
     @FXML
     private void initialize() throws IOException {
 
-        viewerBtn.setOnAction(event ->loadPage("/viewerWin/viewerWin",event));
-        clientBtn.setOnAction(event ->loadPage("/clientWin/playerWin",event));
-        diemBtn.setOnAction(event -> loadPage("/diemWin/diemWin",event));
-        mcBtn.setOnAction(event -> loadPage("/mcWin/mcWin",event));
-        mcBtn.setOnAction(event -> loadPage("/mcWin/mcWin",event));
-        viewerBtn.setOnAction(event -> loadPage("/viewerWin/viewerWin",event));
+        viewerBtn.setOnAction(event -> loadPage("/viewerWin/viewerWin", event));
+        clientBtn.setOnAction(event -> loadPage("/clientWin/playerWin", event));
+        diemBtn.setOnAction(event -> loadPage("/diemWin/diemWin", event));
+        mcBtn.setOnAction(event -> loadPage("/mcWin/mcWin", event));
+        mcBtn.setOnAction(event -> loadPage("/mcWin/mcWin", event));
+        viewerBtn.setOnAction(event -> loadPage("/viewerWin/viewerWin", event));
     }
 
-    private void loadPage(String page, ActionEvent event)  {
+    private void loadPage(String page, ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/com/httt/client"+page+".fxml"));
+            loader.setLocation(getClass().getResource("/com/httt/client" + page + ".fxml"));
             Parent content = loader.load();
 
             Scene scene = new Scene(content);
@@ -57,8 +57,7 @@ public class MainClient {
             KeyCombination customExitCombo = new KeyCodeCombination(KeyCode.F12, KeyCombination.SHIFT_ANY);
             stage.setFullScreenExitKeyCombination(customExitCombo);
             stage.setFullScreen(true);
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

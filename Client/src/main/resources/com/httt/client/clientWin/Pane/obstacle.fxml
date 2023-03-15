@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.httt.client.control.clientWin.Pane.obstacle"
-            prefHeight="634.0" prefWidth="1366.0">
-
+<AnchorPane fx:id="obstaclePane" prefHeight="634.0" prefWidth="1366.0" stylesheets="@css/label-card.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.httt.client.control.clientWin.Pane.obstacle">
+   <children>
+      <Label fx:id="questionLb" alignment="CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="58.0" maxHeight="30.0" prefHeight="30.0" prefWidth="1366.0" styleClass="ques-card" stylesheets="@css/label-card.css" text="Label" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageView" fitHeight="600.0" fitWidth="900.0" layoutX="280.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="233.0" AnchorPane.topAnchor="30.0" />
+   </children>
 </AnchorPane>
