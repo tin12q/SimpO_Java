@@ -11,6 +11,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.ServerSocket;
+import java.io.*;
+import java.net.*;
 
 public class Main extends Application {
     @FXML
@@ -26,6 +29,14 @@ public class Main extends Application {
 
         Scene scene = new Scene(content);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        try {
+            ServerSocket ss = new ServerSocket(7777);
+//            Socket soc = ss.accept();
+            System.out.println("done");
+        } catch(IOException e) {
+            throw new RuntimeException(e);
+        }
 
         stage.setScene(scene);
         stage.setX(0); stage.setY(0);

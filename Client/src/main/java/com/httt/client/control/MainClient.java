@@ -13,6 +13,7 @@ import javafx.scene.input.KeyCombination;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.Socket;
 
 public class MainClient {
 
@@ -30,13 +31,10 @@ public class MainClient {
 
     @FXML
     private void initialize() throws IOException {
-
         viewerBtn.setOnAction(event -> loadPage("/viewerWin/viewerWin", event));
         clientBtn.setOnAction(event -> loadPage("/clientWin/playerWin", event));
         diemBtn.setOnAction(event -> loadPage("/diemWin/diemWin", event));
         mcBtn.setOnAction(event -> loadPage("/mcWin/mcWin", event));
-        mcBtn.setOnAction(event -> loadPage("/mcWin/mcWin", event));
-        viewerBtn.setOnAction(event -> loadPage("/viewerWin/viewerWin", event));
     }
 
     private void loadPage(String page, ActionEvent event) {
@@ -51,7 +49,6 @@ public class MainClient {
 
             stage.setScene(scene);
             stage.show();
-
             //fullScreen exit button on f12
             stage.setFullScreenExitHint("");
             KeyCombination customExitCombo = new KeyCodeCombination(KeyCode.F12, KeyCombination.SHIFT_ANY);
@@ -61,5 +58,4 @@ public class MainClient {
             throw new RuntimeException(e);
         }
     }
-
 }
