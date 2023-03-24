@@ -10,6 +10,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.*;
+import java.io.*;
+
 
 public class SerWin {
 
@@ -39,9 +42,11 @@ public class SerWin {
 
     @FXML
     void Start(ActionEvent event) {
+        initServer init = new initServer();
+        init.start();
         IP.setText("IP: " + new IpGet().getHostIP());
     }
-    
+
     @FXML
     private void initialize() {
         stuffbtn.setOnAction(event -> loadPage("Home", event));
@@ -50,6 +55,7 @@ public class SerWin {
         accelbtn.setOnAction(event -> loadPage("speedUpRound", event));
         tiebtn.setOnAction(event -> loadPage("tieBreakRound", event));
         finishbtn.setOnAction(event -> loadPage("finishRound", event));
+
     }
     private void loadPage(String name, ActionEvent event) {
         try {
@@ -77,6 +83,31 @@ public class SerWin {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+    class initServer extends Thread {
+        @Override
+        public void run() {
+            super.run();
+            ServerSocket ss = null;
+            try {
+                ss = new ServerSocket(3333);
+                Socket s = ss.accept();
+                DataInputStream din = new DataInputStream(s.getInputStream());
+                DataOutputStream dout = new DataOutputStream(s.getOutputStream());
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                String str = "abcd", str2 = "";
+                while (!str.equals("stop")) {
+                    str = din.readUTF();
+                    System.out.println("client says: " + str);
+                    str2 = br.readLine();
+                    dout.writeUTF(str2);
+                    dout.flush();
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }

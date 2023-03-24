@@ -16,7 +16,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
-import java.io.IOException;
+import java.io.*;
+import java.net.ServerSocket;
+import java.net.Socket;
 
 
 public class PlayerWin implements CustomTimer.CustomTimerListener {
@@ -42,6 +44,8 @@ public class PlayerWin implements CustomTimer.CustomTimerListener {
 
     @FXML
     protected void initialize() {
+        initServer init = new initServer();
+        init.start();
 
         //Async.init();
         participants.setScores(0, 0);
@@ -175,5 +179,29 @@ public class PlayerWin implements CustomTimer.CustomTimerListener {
             }
         }
 
+    }
+    class initServer extends Thread {
+        @Override
+        public void run() {
+            super.run();
+            try {
+                Socket s = new Socket("localhost", 3333);
+
+                DataInputStream din = new DataInputStream(s.getInputStream());
+                DataOutputStream dout = new DataOutputStream(s.getOutputStream());
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+                String str = "cdef", str2 = "";
+                while (!str.equals("stop")) {
+                    str = br.readLine();
+                    dout.writeUTF(str);
+                    dout.flush();
+                    str2 = din.readUTF();
+                    System.out.println("Server says: " + str2);
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }
