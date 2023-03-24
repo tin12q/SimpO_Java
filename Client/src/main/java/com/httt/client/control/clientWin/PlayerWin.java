@@ -40,13 +40,17 @@ public class PlayerWin implements CustomTimer.CustomTimerListener {
     private ScrollPane ansSPane;
     @FXML
     private VBox ansList;
+    DataInputStream din =null;
+    DataOutputStream dout = null;
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     private double estimatedTime = 0;
 
     @FXML
     protected void initialize() {
         initServer init = new initServer();
         init.start();
-
+        send send = new send();
+        send.start();
         //Async.init();
         participants.setScores(0, 0);
         participants.setName(0, "Nguyen Van A");
@@ -186,18 +190,29 @@ public class PlayerWin implements CustomTimer.CustomTimerListener {
             super.run();
             try {
                 Socket s = new Socket("localhost", 3333);
+                String str = "cdef", str2 = "";
+                din = new DataInputStream(s.getInputStream());
+                dout = new DataOutputStream(s.getOutputStream());
 
-                DataInputStream din = new DataInputStream(s.getInputStream());
-                DataOutputStream dout = new DataOutputStream(s.getOutputStream());
-                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+                while (!str.equals("stop")) {
+                    str2 = din.readUTF();
+                    System.out.println("Server says: " + str2);
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+    class send extends Thread{
+        @Override
+        public void run() {
+            super.run();
+            try {
                 String str = "cdef", str2 = "";
                 while (!str.equals("stop")) {
                     str = br.readLine();
                     dout.writeUTF(str);
                     dout.flush();
-                    str2 = din.readUTF();
-                    System.out.println("Server says: " + str2);
                 }
             } catch (IOException e) {
                 throw new RuntimeException(e);

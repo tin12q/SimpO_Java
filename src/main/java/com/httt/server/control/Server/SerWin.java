@@ -39,11 +39,16 @@ public class SerWin {
 
     @FXML
     private MFXButton tiebtn;
+    DataInputStream din =null;
+    DataOutputStream dout = null;
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     @FXML
     void Start(ActionEvent event) {
         initServer init = new initServer();
         init.start();
+        send send = new send();
+        send.start();
         IP.setText("IP: " + new IpGet().getHostIP());
     }
 
@@ -89,20 +94,31 @@ public class SerWin {
         @Override
         public void run() {
             super.run();
-            ServerSocket ss = null;
             try {
-                ss = new ServerSocket(3333);
+                ServerSocket ss = new ServerSocket(3333);
                 Socket s = ss.accept();
-                DataInputStream din = new DataInputStream(s.getInputStream());
-                DataOutputStream dout = new DataOutputStream(s.getOutputStream());
-                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+                String str = "cdef", str2 = "";
+                din = new DataInputStream(s.getInputStream());
+                dout = new DataOutputStream(s.getOutputStream());
 
-                String str = "abcd", str2 = "";
                 while (!str.equals("stop")) {
-                    str = din.readUTF();
-                    System.out.println("client says: " + str);
-                    str2 = br.readLine();
-                    dout.writeUTF(str2);
+                    str2 = din.readUTF();
+                    System.out.println("Client says: " + str2);
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+    class send extends Thread{
+        @Override
+        public void run() {
+            super.run();
+            try {
+                String str = "cdef", str2 = "";
+                while (!str.equals("stop")) {
+                    str = br.readLine();
+                    dout.writeUTF(str);
                     dout.flush();
                 }
             } catch (IOException e) {
